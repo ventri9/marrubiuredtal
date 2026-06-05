@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASD Red Tal Marrubiu — Circolo Scacchistico</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="red_tal.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="chess-bg">
 
@@ -17,7 +17,7 @@
     </div>
     <div class="logo-text">
       <strong>RED TAL</strong>
-      <span>Marrubiu -- dal 2009</span>
+      <span>Marrubiu — dal 2009</span>
     </div>
   </a>
   <ul class="nav-links">
@@ -39,11 +39,13 @@
 </nav>
 
 <header class="hero">
-  <img src="red_tal.png" height="300" width="300" alt="Logo ASD Red Tal" class="hero-logo-watermark" aria-hidden="true">
+  <!-- Logo grande watermark — occupa tutta la metà destra -->
+  <img src="red_tal.png" alt="" class="hero-logo-watermark" aria-hidden="true">
 
   <div class="hero-board" aria-hidden="true">
     <div class="hero-board-inner" id="heroBoardInner"></div>
   </div>
+
   <div class="hero-content">
     <div class="hero-badge">Circolo Scacchistico — Marrubiu, Sardegna</div>
     <h1>Dove la<br><em>strategia</em><br>batte l'arte.</h1>
@@ -60,6 +62,7 @@
   </div>
 </header>
 
+<!-- NOTIZIE -->
 <section class="news-section" id="notizie">
   <div class="section-header fade-up">
     <div>
@@ -93,8 +96,8 @@
     <div class="news-col">
       <a class="news-card" href="#">
         <span class="news-tag">Nazionale</span>
-        <h3>Ci avviciniamo ai Campioanti italiani giovanili</h3>
-        <p>I nostri soliti giovani sono pronti per partecipare al campionato nazionale.</p>
+        <h3>Ci avviciniamo ai Campionati italiani giovanili</h3>
+        <p>I nostri giovani sono pronti per partecipare al campionato nazionale.</p>
         <div class="date">29/5 Agosto/Settembre 2026</div>
       </a>
       <a class="news-card" href="#">
@@ -107,6 +110,7 @@
   </div>
 </section>
 
+<!-- TESSERATI -->
 <section class="members-section" id="tesserati">
   <div class="section-header fade-up">
     <div>
@@ -120,7 +124,6 @@
     <button class="tab-btn active" onclick="showTab(this,'adulti')">♙ Adulti</button>
     <button class="tab-btn" onclick="showTab(this,'giovani')">♟ Giovani (U18)</button>
   </div>
-
   <div class="members-panel active" id="panel-adulti">
     <div class="members-grid">
       <div class="member-card fade-up">
@@ -133,9 +136,7 @@
           <div class="mstat"><div class="val">34</div><div class="key">Partite</div></div>
           <div class="mstat"><div class="val">68%</div><div class="key">Vittorie</div></div>
         </div>
-        <div class="member-titles">
-          <span class="title-chip gold">3 class. Camp. Regionale 2025</span>
-        </div>
+        <div class="member-titles"><span class="title-chip gold">3° Camp. Regionale 2025</span></div>
         <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 9° classificato</span></div>
       </div>
       <div class="member-card fade-up">
@@ -148,14 +149,12 @@
           <div class="mstat"><div class="val">28</div><div class="key">Partite</div></div>
           <div class="mstat"><div class="val">61%</div><div class="key">Vittorie</div></div>
         </div>
-        <div class="member-titles">
-          <span class="title-chip gold">3 class. Coppa città di Tempio 2026</span>
-        </div>
+        <div class="member-titles"><span class="title-chip gold">3° Coppa città di Tempio 2026</span></div>
         <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 3° classificato</span></div>
       </div>
       <div class="member-card fade-up">
         <div class="member-header">
-          <div class="member-avatar">LC</div>
+          <div class="member-avatar">LS</div>
           <div class="member-info"><h4>Luca Sonis</h4><span class="rank-badge">Candidato Maestro</span></div>
         </div>
         <div class="member-stats">
@@ -163,44 +162,37 @@
           <div class="mstat"><div class="val">41</div><div class="key">Partite</div></div>
           <div class="mstat"><div class="val">54%</div><div class="key">Vittorie</div></div>
         </div>
-        <div class="member-titles">
-          <span class="title-chip silver">3,5 pt su 4 all'ultimo C.I.S</span>
-        </div>
+        <div class="member-titles"><span class="title-chip silver">3,5 pt su 4 all'ultimo C.I.S</span></div>
         <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 6° classificato</span></div>
       </div>
     </div>
   </div>
-
   <div class="members-panel" id="panel-giovani">
     <div class="members-grid">
       <div class="member-card fade-up">
         <div class="member-header">
           <div class="member-avatar">LV</div>
-          <div class="member-info"><h4>Lorenzo Ventrice</h4><span class="rank-badge">U18 · Promessa · 1° nazionale</span></div>
+          <div class="member-info"><h4>Lorenzo Ventrice</h4><span class="rank-badge">U18 · Promessa · 1° Nazionale</span></div>
         </div>
         <div class="member-stats">
           <div class="mstat"><div class="val">1950</div><div class="key">ELO FIDE</div></div>
           <div class="mstat"><div class="val">22</div><div class="key">Partite</div></div>
           <div class="mstat"><div class="val">72%</div><div class="key">Vittorie</div></div>
         </div>
-        <div class="member-titles">
-          <span class="title-chip gold">Vincitore del CIG Regionale per 6 volte di fila</span>
-        </div>
+        <div class="member-titles"><span class="title-chip gold">Vincitore CIG Regionale 6 volte di fila</span></div>
         <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 16° classificato</span></div>
       </div>
       <div class="member-card fade-up">
         <div class="member-header">
-          <div class="member-avatar">EM</div>
-          <div class="member-info"><h4>Emanuele Cancedda</h4><span class="rank-badge">U16 · Promessa · 1° nazionale </span></div>
+          <div class="member-avatar">EC</div>
+          <div class="member-info"><h4>Emanuele Cancedda</h4><span class="rank-badge">U16 · Promessa · 1° Nazionale</span></div>
         </div>
         <div class="member-stats">
           <div class="mstat"><div class="val">1893</div><div class="key">ELO FIDE</div></div>
           <div class="mstat"><div class="val">18</div><div class="key">Partite</div></div>
           <div class="mstat"><div class="val">65%</div><div class="key">Vittorie</div></div>
         </div>
-        <div class="member-titles">
-          <span class="title-chip gold">Più volte campione regionale U16</span>
-        </div>
+        <div class="member-titles"><span class="title-chip gold">Più volte campione regionale U16</span></div>
         <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 8° classificato</span></div>
       </div>
       <div class="member-card fade-up">
@@ -213,15 +205,14 @@
           <div class="mstat"><div class="val">14</div><div class="key">Partite</div></div>
           <div class="mstat"><div class="val">60%</div><div class="key">Vittorie</div></div>
         </div>
-        <div class="member-titles">
-          <span class="title-chip bronze">Campionessa Italiana U8 2024</span>
-        </div>
-        <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 51° classificata</span></div>
+        <div class="member-titles"><span class="title-chip bronze">Campionessa Italiana U8 2024</span></div>
+        <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 51ª classificata</span></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- TORNEI -->
 <section class="tornei-section" id="tornei">
   <div class="section-header fade-up">
     <div>
@@ -233,53 +224,39 @@
   </div>
   <div class="tornei-list fade-up">
     <div class="torneo-row">
-      <div class="torneo-name">
-        <h4>CIG 2025 — Campionato Regionale Sardegna U18</h4>
-        <p>Marrubiu · 13 Aprile 2025 · ELO Rapid FIDE</p>
-      </div>
+      <div class="torneo-name"><h4>CIG 2025 — Campionato Regionale Sardegna U18</h4><p>Marrubiu · 13 Aprile 2025 · ELO Rapid FIDE</p></div>
       <div class="torneo-meta"><div class="val">32</div><div class="key">Partecipanti</div></div>
       <div class="torneo-meta"><div class="val">U18</div><div class="key">Categoria</div></div>
       <div><span class="torneo-status status-upcoming">Prossimo</span></div>
     </div>
     <div class="torneo-row">
-      <div class="torneo-name">
-        <h4>Trofeo Città di Marrubiu 2025</h4>
-        <p>Marrubiu · 30 Ottobre 2025 · ELO Standard FIDE</p>
-      </div>
+      <div class="torneo-name"><h4>Trofeo Città di Marrubiu 2025</h4><p>Marrubiu · 30 Ottobre 2025 · ELO Standard FIDE</p></div>
       <div class="torneo-meta"><div class="val">48</div><div class="key">Partecipanti</div></div>
       <div class="torneo-meta"><div class="val">Open</div><div class="key">Categoria</div></div>
       <div><span class="torneo-status status-done">Concluso</span></div>
     </div>
     <div class="torneo-row">
-      <div class="torneo-name">
-        <h4>Torneo Blitz 2026</h4>
-        <p>Marrubiu · 20 Agosto 2026 · Blitz 3+2</p>
-      </div>
+      <div class="torneo-name"><h4>Torneo Blitz 2026</h4><p>Marrubiu · 20 Agosto 2026 · Blitz 3+2</p></div>
       <div class="torneo-meta"><div class="val">20</div><div class="key">Partecipanti</div></div>
       <div class="torneo-meta"><div class="val">Open</div><div class="key">Categoria</div></div>
       <div><span class="torneo-status status-upcoming">Prossimamente</span></div>
     </div>
     <div class="torneo-row">
-      <div class="torneo-name">
-        <h4>Campionato Regionale Assoluto Sardegna</h4>
-        <p>Oristano · Giugno 2026 · ELO Standard FIDE</p>
-      </div>
+      <div class="torneo-name"><h4>Campionato Regionale Assoluto Sardegna</h4><p>Oristano · Giugno 2026 · ELO Standard FIDE</p></div>
       <div class="torneo-meta"><div class="val">~80</div><div class="key">Partecipanti</div></div>
       <div class="torneo-meta"><div class="val">Open</div><div class="key">Categoria</div></div>
-      <div><span class="torneo-status status-upcoming">Concluso</span></div>
+      <div><span class="torneo-status status-done">Concluso</span></div>
     </div>
     <div class="torneo-row">
-      <div class="torneo-name">
-        <h4>Trofeo Città di Marrubiu 2026</h4>
-        <p>Marrubiu · Ottobre 2026 · Open</p>
-      </div>
-      <div class="torneo-meta"><div class="val">26</div><div class="key">Partecipanti</div></div>
+      <div class="torneo-name"><h4>Trofeo Città di Marrubiu 2026</h4><p>Marrubiu · Ottobre 2026 · Open</p></div>
+      <div class="torneo-meta"><div class="val">—</div><div class="key">Partecipanti</div></div>
       <div class="torneo-meta"><div class="val">Open</div><div class="key">Categoria</div></div>
-      <div><span class="torneo-status status-done">Prossimamente</span></div>
+      <div><span class="torneo-status status-upcoming">Prossimamente</span></div>
     </div>
   </div>
 </section>
 
+<!-- ELO -->
 <section class="elo-section" id="elo">
   <div class="section-header fade-up">
     <div>
@@ -293,7 +270,7 @@
       <p>Il sistema ELO è il metodo internazionale di classificazione dei giocatori di scacchi, sviluppato dal fisico Arpad Elo. Misura la forza relativa dei giocatori basandosi sui risultati delle partite ufficiali.</p>
       <p>Ogni vittoria contro un avversario più forte aumenta maggiormente il punteggio. Una sconfitta contro un avversario più debole lo fa calare di più. Il sistema premia la costanza e la partecipazione ai tornei ufficiali FIDE e FSI.</p>
       <p>I nostri tesserati partecipano regolarmente a tornei con variazione ELO, contribuendo a costruire il loro profilo internazionale nel database FIDE.</p>
-      <p>Possiamo vantare di aver cresciuto il primo e unico GM in sardegna Francesco Sonis, crescendo con noi è diventato un campione, grazie a un intenso lavoro ed una forte disciplina e ossessione.</p>
+      <p>Vanto unico del nostro circolo: abbiamo cresciuto il primo e unico <strong style="color:var(--red)">Grande Maestro della Sardegna</strong>, Francesco Sonis, formatosi con noi grazie a un lavoro intenso, disciplina e passione assoluta.</p>
       <a href="https://ratings.fide.com" target="_blank" class="btn-outline" style="margin-top:1rem;">Cerca su FIDE Ratings →</a>
     </div>
     <div class="elo-scale">
@@ -303,13 +280,14 @@
       <div class="elo-tier"><div class="elo-range">2200</div><div class="elo-tier-name">Maestro (M)</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:64%;background:#c0c0c0;"></div></div></div>
       <div class="elo-tier"><div class="elo-range">2000</div><div class="elo-tier-name">Candidato Maestro (CM)</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:52%;background:#b87340;"></div></div></div>
       <div class="elo-tier"><div class="elo-range">1800</div><div class="elo-tier-name">1ª Nazionale</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:38%;background:#5a8a5a;"></div></div></div>
-      <div class="elo-tier"><div class="elo-range">1600</div><div class="elo-tier-name">2ª Nazionale</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:20%;background:var(--muted);"></div></div></div>
-      <div class="elo-tier"><div class="elo-range">1500</div><div class="elo-tier-name">3ª Nazionale</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:20%;background:var(--muted);"></div></div></div>
-      <div class="elo-tier"><div class="elo-range">&lt;1500</div><div class="elo-tier-name">Non Classificato</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:20%;background:var(--muted);"></div></div></div>
+      <div class="elo-tier"><div class="elo-range">1600</div><div class="elo-tier-name">2ª Nazionale</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:28%;background:var(--muted);"></div></div></div>
+      <div class="elo-tier"><div class="elo-range">1500</div><div class="elo-tier-name">3ª Nazionale</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:18%;background:var(--muted);"></div></div></div>
+      <div class="elo-tier"><div class="elo-range">&lt;1500</div><div class="elo-tier-name">Non Classificato</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:8%;background:var(--muted2);"></div></div></div>
     </div>
   </div>
 </section>
 
+<!-- CORSI -->
 <section class="corsi-section" id="corsi">
   <div class="section-header fade-up">
     <div>
@@ -334,7 +312,7 @@
       <span class="corso-icon">♞</span>
       <span class="corso-level">Livello Intermedio</span>
       <h3>Corso Intermedio</h3>
-      <p>Ideale per chi vuole consolidare le proprie capacità scacchistiche e migliorare la compreensão profonda del gioco. Tattiche, struttura di pedoni, finali.</p>
+      <p>Ideale per chi vuole consolidare le proprie capacità scacchistiche e migliorare la comprensione profonda del gioco. Tattiche, struttura di pedoni, finali.</p>
       <div class="orari">
         <div class="orario"><div class="orario-dot"></div>Lunedì: 18:30 – 19:30</div>
         <div class="orario"><div class="orario-dot"></div>Mercoledì: 18:30 – 19:30</div>
@@ -353,6 +331,7 @@
   </div>
 </section>
 
+<!-- CHI SIAMO -->
 <section class="chisiamo-section" id="chisiamo">
   <div class="chisiamo-inner fade-up">
     <div class="chisiamo-text">
@@ -365,16 +344,16 @@
       <a href="https://www.facebook.com/redtalmarrubiu/" target="_blank" class="btn-outline" style="margin-top:1rem;">Seguici su Facebook →</a>
     </div>
     <div class="chisiamo-visual">
-        <div class="chessboard-mini" id="board"></div>
-        <div class="float-card">
-        </div>
-
-        <div class="float-card">
-        </div>
+      <div class="chessboard-mini" id="board"></div>
+      <div class="float-card">
+        <div class="num">♔</div>
+        <div class="lbl">Fondati nel 2009</div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ISCRIVITI -->
 <section class="iscriviti-section" id="iscriviti">
   <div class="iscriviti-inner">
     <h2>Pronto a fare la tua prima mossa?</h2>
@@ -385,13 +364,12 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
       <a class="nav-logo" href="#" style="display:inline-flex;margin-bottom:1rem;">
-        <div class="logo-emblem">
-          <img src="red_tal.png" height="45" alt="Logo" class="logo-sito">
-        </div>
+        <div class="logo-emblem"><img src="red_tal.png" height="45" alt="Logo" class="logo-sito"></div>
         <div class="logo-text"><strong>RED TAL</strong><span>Marrubiu · dal 2009</span></div>
       </a>
       <p>ASD Circolo Scacchistico Red Tal — promuovere gli scacchi in Sardegna, crescere campioni e costruire comunità.</p>
@@ -425,7 +403,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 ASD Circolo Scacchistico Red Tal — Tutti i diritti riservati</span>
+    <span>© 2026 ASD Circolo Scacchistico Red Tal — Tutti i diritti riservati</span>
     <div class="social-links">
       <a href="https://www.facebook.com/redtalmarrubiu/" target="_blank">Facebook</a>
       <a href="https://www.instagram.com/red_tal_marrubiu/" target="_blank">Instagram</a>
@@ -433,19 +411,20 @@
   </div>
 </footer>
 
+<button id="scroll-top" aria-label="Torna in alto"></button>
+
 <script>
-  /* ── THEME TOGGLE ── */
+  /* THEME */
   const html = document.documentElement;
   const saved = localStorage.getItem('redtal-theme') || 'dark';
   html.setAttribute('data-theme', saved);
-
   document.getElementById('themeToggle').addEventListener('click', () => {
     const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
     localStorage.setItem('redtal-theme', next);
   });
 
-  /* ── TAB SWITCHING ── */
+  /* TABS */
   function showTab(btn, name) {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     document.querySelectorAll('.members-panel').forEach(p => p.classList.remove('active'));
@@ -453,14 +432,11 @@
     btn.classList.add('active');
   }
 
-  /* ── HERO BOARD ── */
+  /* HERO BOARD */
   const hbi = document.getElementById('heroBoardInner');
-  for(let i=0;i<64;i++){
-    const d=document.createElement('div');
-    hbi.appendChild(d);
-  }
+  for(let i=0;i<64;i++){ const d=document.createElement('div'); hbi.appendChild(d); }
 
-  /* ── MINI CHESSBOARD ── */
+  /* MINI BOARD */
   const board = document.getElementById('board');
   const pieces = {
     '0,0':'♜','0,1':'♞','0,2':'♝','0,3':'♛','0,4':'♚','0,5':'♝','0,6':'♞','0,7':'♜',
@@ -470,22 +446,29 @@
   };
   for(let r=0;r<8;r++){
     for(let c=0;c<8;c++){
-      const sq = document.createElement('div');
-      const isW = (r+c)%2===0;
+      const sq=document.createElement('div');
+      const isW=(r+c)%2===0;
       sq.className='sq '+(isW?'w':'b');
       sq.style.fontSize='clamp(11px,1.8vw,17px)';
-      sq.style.color= isW ? 'rgba(255,255,255,0.18)' : 'rgba(192,57,43,0.55)';
+      sq.style.color=isW?'rgba(255,255,255,0.18)':'rgba(192,57,43,0.55)';
       const p=pieces[r+','+c];
       if(p) sq.textContent=p;
       board.appendChild(sq);
     }
   }
 
-  /* ── SCROLL REVEAL ── */
-  const obs = new IntersectionObserver(entries=>{
+  /* SCROLL REVEAL */
+  const obs=new IntersectionObserver(entries=>{
     entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
   },{threshold:0.1});
   document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+  /* SCROLL TOP */
+  const scrollBtn=document.getElementById('scroll-top');
+  window.addEventListener('scroll',()=>{
+    scrollBtn.classList.toggle('visible', window.scrollY>300);
+  });
+  scrollBtn.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });
 </script>
 </body>
 </html>
