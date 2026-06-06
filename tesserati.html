@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tesserati — ASD Red Tal Marrubiu</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="img/red_tal.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="chess-bg">
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="logo-emblem">
+      <img src="img/red_tal.png" height="48" width="auto" alt="Logo ASD Red Tal" class="logo-sito">
+    </div>
+    <div class="logo-text">
+      <strong>RED TAL</strong>
+      <span>Marrubiu — dal 2009</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#notizie">Notizie</a></li>
+    <li><a href="index.html#tornei">Tornei</a></li>
+    <li><a href="index.html#elo">ELO</a></li>
+    <li><a href="index.html#corsi">Corsi</a></li>
+    <li><a href="index.html#chisiamo">Chi Siamo</a></li>
+    <li>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambia tema">
+        <span class="toggle-icon-light">☀️</span>
+        <span class="toggle-icon-dark">🌙</span>
+        <div class="toggle-thumb"></div>
+      </button>
+    </li>
+    <li><a href="index.html#iscriviti" class="nav-cta">Iscriviti</a></li>
+  </ul>
+</nav>
+
+<!-- HERO INTERNO -->
+<header class="tc-hero">
+  <div class="tc-hero-content">
+    <a href="index.html" class="tc-back">← Torna alla Home</a>
+    <p class="section-tag">La nostra squadra</p>
+    <h1 class="section-title" style="font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,4rem);font-weight:900;color:var(--white);line-height:1.1;">Tutti i Tesserati</h1>
+    <div class="divider"></div>
+    <p class="tc-hero-sub">Conoscili uno per uno — ognuno con la propria storia, il proprio stile e la propria dedizione al gioco.</p>
+  </div>
+</header>
+
+<!-- ADULTI -->
+<section class="tc-section" id="adulti">
+  <div class="section-header fade-up">
+    <div>
+      <p class="section-tag">Categoria adulti</p>
+      <h2 class="section-title">♙ Adulti</h2>
+      <div class="divider"></div>
+    </div>
+  </div>
+  <div class="tc-grid">
+      <div class="tc-card fade-up">
+        <div class="tc-photo-wrap">
+          <div class="tc-placeholder">AA</div>
+            <img src="img/ale.jpeg" alt="Alessandro Altea"> 
+          <div class="tc-overlay">
+            <span class="tc-overlay-name">Alessandro Altea</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-head">
+            <h3 class="tc-name">Alessandro Altea</h3>
+            <div class="tc-meta">
+              <span class="tc-elo-badge tc-elo-cm">ELO 2099</span>
+              <span class="tc-cat">Candidato Maestro</span>
+            </div>
+          </div>
+          <p class="tc-bio">Alessandro è uno dei pilastri del Red Tal, punto di riferimento tecnico per i giocatori più giovani. Membro dal 2022, capitano della prima squadra, vanta una dedizione al gioco che si unisce a una naturale attitudine all'insegnamento: come istruttore trasmette metodo, pazienza e amore per la scacchiera. Oltre che essere un giocatore esperto, calmo e sempre in controllo della situazione.</p>
+        </div>
+      </div>
+      <div class="tc-card fade-up">
+        <div class="tc-photo-wrap">
+          <div class="tc-placeholder">GM</div>
+            <img src="img/gianluca-mameli.png" alt="Gianluca Mameli">
+          <div class="tc-overlay">
+            <span class="tc-overlay-name">Gianluca Mameli</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-head">
+            <h3 class="tc-name">Gianluca Mameli</h3>
+            <div class="tc-meta">
+              <span class="tc-elo-badge tc-elo-cm">ELO 2015</span>
+              <span class="tc-cat">Candidato Maestro</span>
+            </div>
+          </div>
+          <p class="tc-bio">Gianluca unisce al talento scacchistico un ruolo attivo nella vita societaria del Red Tal, di cui è consigliere nel direttivo. E' sempre a disposizione per il circolo e i suoi membri. Campione regionale nel 2022, è tra i giocatori più competitivi della Sardegna. La sua presenza è fondamentale tanto sul piano agonistico quanto su quello organizzativo.</p>
+        </div>
+      </div>
+      <div class="tc-card fade-up">
+        <div class="tc-photo-wrap">
+          <div class="tc-placeholder">LS</div>
+            <img src="img/Luca-Sonis.png" alt="Luca Sonis">
+          <div class="tc-overlay">
+            <span class="tc-overlay-name">Luca Sonis</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-head">
+            <h3 class="tc-name">Luca Sonis</h3>
+            <div class="tc-meta">
+              <span class="tc-elo-badge tc-elo-cm">ELO 2026</span>
+              <span class="tc-cat">Candidato Maestro</span>
+            </div>
+          </div>
+          <p class="tc-bio">Luca vanta una costanza nei tornei ufficiali ne ha forgiato un profilo tecnico completo e maturo. Fratello gemello del Grande Maestro Francesco Sonis, porta con orgoglio l'eredità di una famiglia che ha scritto pagine importanti degli scacchi sardi. Il suo punteggio ELO supera i 2000, traguardo significativo che lo pone stabilmente tra i candidati maestri più solidi della regione.</p>
+        </div>
+      </div>
+      <div class="tc-card fade-up">
+        <div class="tc-photo-wrap">
+            <img src="img/Germano-Mascia.png" alt="Germano Mascia">
+          <div class="tc-overlay">
+            <span class="tc-overlay-name">Germano Mascia</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-head">
+            <h3 class="tc-name">Germano Mascia</h3>
+            <div class="tc-meta">
+              <span class="tc-elo-badge tc-elo-cm">ELO 2003</span>
+              <span class="tc-cat">Candidato Maestro</span>
+            </div>
+          </div>
+          <p class="tc-bio">Germano è una delle figure giovanili più importanti del Red Tal, da poco 18enne, Germano fin da piccolo si è distinto grazie alle sue qualità tecniche invidiabili. E' un giocatore completo, capace di adattarsi a qualsiasi avversario e situazione. Il suo ELO supera i 2000 punti, traguardo che testimonia la sua crescita costante e il suo talento naturale. Con un futuro promettente davanti a sé, è destinato a diventare uno dei protagonisti assoluti degli scacchi sardi nei prossimi anni.</p>
+        </div>
+      </div>
+      <div class="tc-card fade-up">
+        <div class="tc-photo-wrap">
+          <div class="tc-placeholder">DS</div>
+            <img src="img/daniele-spiga.png" alt="Daniele Spiga">
+          <div class="tc-overlay">
+            <span class="tc-overlay-name">Daniele Spiga</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-head">
+            <h3 class="tc-name">Daniele Spiga</h3>
+            <div class="tc-meta">
+              <span class="tc-elo-badge tc-elo-cm">ELO 1747</span>
+              <span class="tc-cat">Seconda Nazionale</span>
+            </div>
+          </div>
+          <p class="tc-bio">Daniele guida il circolo Red Tal ormai da 4 anni. Sotto la sua presidenza il circolo ha consolidato la propria presenza nel panorama scacchistico sardo, organizzando tornei di rilevanza regionale e ampliando il numero di tesserati. Il suo impegno va ben oltre la gestione amministrativa: è lui il primo a credere nel potenziale di ogni giocatore, dai principianti ai campioni.</p>
+        </div>
+      </div>
+      <div class="tc-card fade-up">
+        <div class="tc-photo-wrap">
+          <div class="tc-placeholder">LP</div>
+            <img src="img/leopoldo-pannella.png" alt="Leopoldo Pannella">
+          <div class="tc-overlay">
+            <span class="tc-overlay-name">Leopoldo Pannella</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-head">
+            <h3 class="tc-name">Leopoldo Pannella</h3>
+            <div class="tc-meta">
+              <span class="tc-elo-badge tc-elo-cm">ELO 1952</span>
+              <span class="tc-cat">Candidato Maestro</span>
+            </div>
+          </div>
+          <p class="tc-bio">Leopoldo è l'istruttore storico del Red Tal e figura di riferimento per l'attività didattica del circolo. Con metodo e passione ha sempre seguito i più piccoli, trasmettendo i fondamentali del gioco con la capacità di rendere ogni lezione coinvolgente. E' grazie al suo lavoro se ora i nostri giovani giocatori hanno ottenuto risultati eccellenti nelle competizioni regionali e nazionali.</p>
+        </div>
+      </div>
+      <div class="tc-card fade-up">
+        <div class="tc-photo-wrap">
+          <div class="tc-placeholder">MC</div>
+            <img src="img/mattia-corrias.png" alt="Mattia Corrias"> 
+          <div class="tc-overlay">
+            <span class="tc-overlay-name">Mattia Corrias</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-head">
+            <h3 class="tc-name">Mattia Corrias</h3>
+            <div class="tc-meta">
+              <span class="tc-elo-badge tc-elo-cm">ELO 1753</span>
+              <span class="tc-cat">Seconda Nazionale</span>
+            </div>
+          </div>
+          <p class="tc-bio">Mattia è consigliere del direttivo e contribuisce attivamente alla vita del circolo con idee fresche e spirito collaborativo. Il suo coinvolgimento spazia dall'organizzazione degli eventi alla comunicazione sui social, aiutando il Red Tal a raggiungere un pubblico sempre più ampio. Un volto giovane e dinamico nella governance del circolo.</p>
+        </div>
+        
+        
+      </div>
+  </div>
+</section>
+
+<!-- GIOVANI -->
+<section class="tc-section tc-section--alt" id="giovani">
+  <div class="section-header fade-up">
+    <div>
+      <p class="section-tag">Settore giovanile</p>
+      <h2 class="section-title">♟ Giovani U18</h2>
+      <div class="divider"></div>
+    </div>
+  </div>
+  <div class="tc-grid">
+      <div class="tc-card fade-up">
+        <div class="tc-photo-wrap">
+          <div class="tc-placeholder">LV</div>
+            <img src="img/Lorenzo-Ventrice.jpeg" alt="Lorenzo Ventrice"> 
+          <div class="tc-overlay">
+            <span class="tc-overlay-name">Lorenzo Ventrice</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-head">
+            <h3 class="tc-name">Lorenzo Ventrice</h3>
+            <div class="tc-meta">
+              <span class="tc-elo-badge tc-elo-prima">ELO 1950</span>
+              <span class="tc-cat">1ª Nazionale · U18</span>
+            </div>
+          </div>
+          <p class="tc-bio">Lorenzo è la punta di diamante del settore giovanile del Red Tal. Sei titoli regionali consecutivi raccontano una storia di dominio assoluto nella categoria U18, frutto di un talento naturale affinato da anni di allenamento costante. Con un ELO vicino ai 2000 punti, è proiettato verso la categoria assoluta e i grandi tornei nazionali. La sua determinazione e la sua maturità scacchistica, rare per la sua età, fanno di lui una delle promesse più interessanti degli scacchi sardi.</p>
+        </div>
+      </div>
+      <div class="tc-card fade-up">
+        <div class="tc-photo-wrap">
+          <div class="tc-placeholder">EC</div>
+            <img src="img/Emanuele-Cancedda.png" alt="Emanuele Cancedda"> 
+          <div class="tc-overlay">
+            <span class="tc-overlay-name">Emanuele Cancedda</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-head">
+            <h3 class="tc-name">Emanuele Cancedda</h3>
+            <div class="tc-meta">
+              <span class="tc-elo-badge tc-elo-prima">ELO 1893</span>
+              <span class="tc-cat">1ª Nazionale · U16</span>
+            </div>
+          </div>
+          <p class="tc-bio">Emanuele è un giovane scacchista con un potenziale enorme. Ha dimostrato una continuità di rendimento eccezionale per la sua età. Il suo gioco combina solidità difensiva e capacità di creare complicazioni tattiche, caratteristiche che lo rendono avversario temibile in qualsiasi torneo. Con quasi 1900 punti ELO è già nel radar dei migliori giovani scacchisti sardi e italiani, e il Red Tal ripone in lui grandi aspettative.</p>
+        </div>
+      </div>
+      <div class="tc-card fade-up">
+        <div class="tc-photo-wrap">
+          <div class="tc-placeholder">VG</div>
+            <img src="img/vicky.png" alt="Victoria Garau"> 
+          <div class="tc-overlay">
+            <span class="tc-overlay-name">Victoria Garau</span>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div class="tc-head">
+            <h3 class="tc-name">Victoria Garau</h3>
+            <div class="tc-meta">
+              <span class="tc-elo-badge tc-elo-terza">ELO 1497</span>
+              <span class="tc-cat">3ª Nazionale · U10</span>
+            </div>
+          </div>
+          <p class="tc-bio">Victoria è la storia più bella del Red Tal degli ultimi anni. Campionessa italiana U8F nel 2024, ha dimostrato al paese intero che la Sardegna può formare campioni di livello assoluto. La sua vittoria al titolo nazionale ha fatto il giro della comunità scacchistica italiana. Ancora giovanissima, ha davanti a sé un percorso enorme: il circolo la segue con cura e affetto, consapevole di avere tra le mani un talento raro.</p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="nav-logo" href="index.html" style="display:inline-flex;margin-bottom:1rem;">
+        <div class="logo-emblem"><img src="red_tal.png" height="45" alt="Logo" class="logo-sito"></div>
+        <div class="logo-text"><strong>RED TAL</strong><span>Marrubiu · dal 2009</span></div>
+      </a>
+      <p>ASD Circolo Scacchistico Red Tal — promuovere gli scacchi in Sardegna, crescere campioni e costruire comunità.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navigazione</h5>
+      <ul>
+        <li><a href="index.html#notizie">Notizie</a></li>
+        <li><a href="index.html#tesserati">Tesserati</a></li>
+        <li><a href="index.html#tornei">Tornei</a></li>
+        <li><a href="index.html#elo">Punteggio ELO</a></li>
+        <li><a href="index.html#corsi">Corsi</a></li>
+        <li><a href="index.html#chisiamo">Chi Siamo</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Tesserati</h5>
+      <ul>
+        <li><a href="#adulti">Adulti</a></li>
+        <li><a href="#giovani">Giovani U18</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contatti</h5>
+      <p><a href="mailto:info@marrubiuredtal.it">info@marrubiuredtal.it</a></p>
+      <p><a href="mailto:socialredtal@gmail.com">socialredtal@gmail.com</a></p>
+      <p><a href="tel:+393458434928">+39 345 843 4928</a></p>
+      <p style="margin-top:.75rem;">Via Antonio Gramsci 3<br>09094 Marrubiu (OR)</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 ASD Circolo Scacchistico Red Tal — Tutti i diritti riservati</span>
+    <div class="social-links">
+      <a href="https://www.facebook.com/redtalmarrubiu/" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/red_tal_marrubiu/" target="_blank">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<button id="scroll-top" aria-label="Torna in alto"></button>
+
+<script>
+  const html = document.documentElement;
+  const saved = localStorage.getItem('redtal-theme') || 'dark';
+  html.setAttribute('data-theme', saved);
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('redtal-theme', next);
+  });
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold: 0.08});
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  const scrollBtn = document.getElementById('scroll-top');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 300);
+  });
+  scrollBtn.addEventListener('click', () => { window.scrollTo({top:0,behavior:'smooth'}); });
+</script>
+</body>
+</html>
