@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASD Red Tal Marrubiu — Circolo Scacchistico</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="red_tal.png" type="image/png">
+<link rel="icon" href="img/red_tal.png" type="image/png">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="chess-bg">
@@ -13,7 +13,7 @@
 <nav>
   <a class="nav-logo" href="#">
     <div class="logo-emblem">
-      <img src="red_tal.png" height="48" width="auto" alt="Logo ASD Red Tal" class="logo-sito">
+      <img src="img/red_tal.png" height="48" width="auto" alt="Logo ASD Red Tal" class="logo-sito">
     </div>
     <div class="logo-text">
       <strong>RED TAL</strong>
@@ -39,13 +39,10 @@
 </nav>
 
 <header class="hero">
-  <!-- Logo grande watermark — occupa tutta la metà destra -->
-  <img src="red_tal.png" alt="" class="hero-logo-watermark" aria-hidden="true">
-
+  <img src="img/red_tal.png" alt="" class="hero-logo-watermark" aria-hidden="true">
   <div class="hero-board" aria-hidden="true">
     <div class="hero-board-inner" id="heroBoardInner"></div>
   </div>
-
   <div class="hero-content">
     <div class="hero-badge">Circolo Scacchistico — Marrubiu, Sardegna</div>
     <h1>Dove la<br><em>strategia</em><br>batte l'arte.</h1>
@@ -73,12 +70,52 @@
     <a href="#" class="see-all">Tutte le notizie →</a>
   </div>
   <div class="news-grid fade-up">
-    <a class="news-card featured" href="#">
+    <div class="news-card featured news-card--with-gallery">
       <span class="news-tag">Scacchi sotto le stelle</span>
       <h3>Blitz notturno — Marrubiu</h3>
       <p>Vi aspettiamo a Marrubiu il 20 agosto per il torneo Blitz notturno più classico degli ultimi anni.</p>
       <div class="date">20 Agosto 2026</div>
-    </a>
+
+      <!-- Mini carosello foto -->
+      <div class="nc-mini">
+        <div class="nc-mini-track-wrap">
+          <div class="nc-mini-track" id="ncMiniTrack">
+
+            <div class="nc-mini-slide">
+              <img src="img/Interprovinciale.png" alt="Campionato Interprovinciale">
+              <div class="nc-mini-placeholder">&#9820;</div>
+              <div class="nc-mini-overlay">
+                <span class="nc-mini-place">Cagliari, CA</span>
+                <span class="nc-mini-title">Campionato Interprovinciale — I nostri giovani</span>
+              </div>
+            </div>
+
+            <div class="nc-mini-slide">
+              <img src="img/vicky.png" alt="Victoria Garau">
+              <div class="nc-mini-placeholder">&#9823;</div>
+              <div class="nc-mini-overlay">
+                <span class="nc-mini-place">Salsomaggiore Terme, PR</span>
+                <span class="nc-mini-title">Victoria Garau — Campionessa Italiana U8F 2024</span>
+              </div>
+            </div>
+
+            <div class="nc-mini-slide">
+              <img src="img/cis.png" alt="Cis 2025">
+              <div class="nc-mini-placeholder">&#9819;</div>
+              <div class="nc-mini-overlay">
+                <span class="nc-mini-place">Roma, RM</span>
+                <span class="nc-mini-title">Promozione in A1</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="nc-mini-btn nc-mini-prev" id="ncMiniPrev" aria-label="Precedente">&#8592;</button>
+        <button class="nc-mini-btn nc-mini-next" id="ncMiniNext" aria-label="Successiva">&#8594;</button>
+        <div class="nc-mini-dots" id="ncMiniDots"></div>
+      </div>
+
+    </div>
     <div class="news-col">
       <a class="news-card" href="#">
         <span class="news-tag">Risultati</span>
@@ -108,6 +145,7 @@
       </a>
     </div>
   </div>
+
 </section>
 
 <!-- TESSERATI -->
@@ -118,7 +156,7 @@
       <h2 class="section-title">Tesserati Più Attivi</h2>
       <div class="divider"></div>
     </div>
-    <a href="#" class="see-all">Tutti i tesserati →</a>
+    <a href="tesserati.html" class="see-all">Tutti i tesserati →</a>
   </div>
   <div class="members-tabs fade-up">
     <button class="tab-btn active" onclick="showTab(this,'adulti')">♙ Adulti</button>
@@ -341,10 +379,99 @@
       <p>L'ASD Circolo Scacchistico Red Tal nasce a Marrubiu, in Sardegna, con la missione di promuovere gli scacchi come strumento di crescita intellettuale, disciplina mentale e socialità.</p>
       <p>Negli anni abbiamo formato decine di giovani campioni, portato la bandiera sarda nelle competizioni nazionali e costruito una comunità solida di appassionati di tutte le età.</p>
       <p>Il nostro nome è un omaggio a Mikhail Tal, il "Mago di Riga", campione del mondo 1960 noto per il suo stile di gioco esplosivo e creativo — l'ispirazione che guida il nostro approccio al gioco.</p>
-      <a href="https://www.facebook.com/redtalmarrubiu/" target="_blank" class="btn-outline" style="margin-top:1rem;">Seguici su Facebook →</a>
+      <div style="display:flex;flex-direction:column;gap:.75rem;margin-top:1rem;">
+        <a href="https://www.facebook.com/redtalmarrubiu/" target="_blank" class="btn-outline">Seguici su Facebook →</a>
+        <a href="#direttivo" class="btn-outline">Il nostro Direttivo →</a>
+      </div>
     </div>
     <div class="chisiamo-visual">
       <div class="chessboard-mini" id="board"></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRETTIVO -->
+<section class="direttivo-section" id="direttivo">
+  <div class="section-header fade-up">
+    <div>
+      <p class="section-tag">Organo societario</p>
+      <h2 class="section-title">Il Direttivo</h2>
+      <div class="divider"></div>
+    </div>
+  </div>
+
+  <div class="direttivo-gruppo fade-up">
+    <h3 class="direttivo-gruppo-title">Dirigenti</h3>
+    <div class="direttivo-grid">
+
+      <div class="direttivo-card">
+        <div class="direttivo-photo-wrap">
+            <img src="img/daniele-spiga.png" alt="Daniele Spiga"> 
+          </div>
+        <div class="direttivo-info">
+          <h4>Daniele Spiga</h4>
+          <span class="direttivo-ruolo presidente">Presidente</span>
+        </div>
+      </div>
+
+      <div class="direttivo-card">
+        <div class="direttivo-photo-wrap">
+          <img src="img/antonello.jpeg" alt="Antonello Pannella"> 
+        </div>
+        <div class="direttivo-info">
+          <h4>Antonello Pannella</h4>
+          <span class="direttivo-ruolo vicepresidente">Vicepresidente</span>
+        </div>
+      </div>
+
+      <div class="direttivo-card">
+        <div class="direttivo-photo-wrap">
+          <img src="img/mattia-corrias.png" alt="Mattia Corrias">
+        </div>
+        <div class="direttivo-info">
+          <h4>Mattia Corrias</h4>
+          <span class="direttivo-ruolo consigliere">Consigliere</span>
+        </div>
+      </div>
+
+      <div class="direttivo-card">
+        <div class="direttivo-photo-wrap">
+          <img src="img/gianluca-mameli.png" alt="Gianluca Mameli">
+        </div>
+        <div class="direttivo-info">
+          <h4>Gianluca Mameli</h4>
+          <span class="direttivo-ruolo consigliere">Consigliere</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="direttivo-gruppo fade-up">
+    <h3 class="direttivo-gruppo-title">Istruttori</h3>
+    <div class="direttivo-grid direttivo-grid--small">
+
+      <div class="direttivo-card">
+        <div class="direttivo-photo-wrap">
+          <div class="direttivo-photo-placeholder">LP</div>
+            <img src="img/leopoldo-pannella.png" alt="Leopoldo Pannella"> 
+          </div>
+        <div class="direttivo-info">
+          <h4>Leopoldo Pannella</h4>
+          <span class="direttivo-ruolo istruttore">Istruttore</span>
+        </div>
+      </div>
+
+      <div class="direttivo-card">
+        <div class="direttivo-photo-wrap">
+          <img src="img/ale.jpeg" alt="Alessandro Altea">
+        </div>
+        <div class="direttivo-info">
+          <h4>Alessandro Altea</h4>
+          <span class="direttivo-ruolo istruttore">Istruttore</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -365,7 +492,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a class="nav-logo" href="#" style="display:inline-flex;margin-bottom:1rem;">
-        <div class="logo-emblem"><img src="red_tal.png" height="45" alt="Logo" class="logo-sito"></div>
+        <div class="logo-emblem"><img src="img/red_tal.png" height="45" alt="Logo" class="logo-sito"></div>
         <div class="logo-text"><strong>RED TAL</strong><span>Marrubiu · dal 2009</span></div>
       </a>
       <p>ASD Circolo Scacchistico Red Tal — promuovere gli scacchi in Sardegna, crescere campioni e costruire comunità.</p>
@@ -379,6 +506,7 @@
         <li><a href="#elo">Punteggio ELO</a></li>
         <li><a href="#corsi">Corsi</a></li>
         <li><a href="#chisiamo">Chi Siamo</a></li>
+        <li><a href="#direttivo">Direttivo</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -387,6 +515,7 @@
         <li><a href="#tesserati">Tesserati Adulti</a></li>
         <li><a href="#tesserati">Giovani U18</a></li>
         <li><a href="#tornei">Calendario Tornei</a></li>
+        <li><a href="#direttivo">Direttivo</a></li>
         <li><a href="#iscriviti">Iscrizioni</a></li>
       </ul>
     </div>
@@ -458,6 +587,83 @@
     entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
   },{threshold:0.1});
   document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+
+
+  /* MINI CAROUSEL — Blitz notturno */
+  (function(){
+    const track = document.getElementById('ncMiniTrack');
+    if(!track) return;
+    const slides = track.querySelectorAll('.nc-mini-slide');
+    const total = slides.length;
+    const prevBtn = document.getElementById('ncMiniPrev');
+    const nextBtn = document.getElementById('ncMiniNext');
+    const dotsWrap = document.getElementById('ncMiniDots');
+    let idx = 0;
+
+    // crea dots
+    for(let i = 0; i < total; i++){
+      const d = document.createElement('span');
+      d.className = 'nc-mini-dot' + (i===0?' active':'');
+      d.addEventListener('click', ()=>goTo(i));
+      dotsWrap.appendChild(d);
+    }
+
+    function goTo(n){
+      idx = Math.max(0, Math.min(total-1, n));
+      track.style.transform = 'translateX(-'+(idx*100)+'%)';
+      dotsWrap.querySelectorAll('.nc-mini-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+      prevBtn.disabled = idx===0;
+      nextBtn.disabled = idx===total-1;
+    }
+
+    prevBtn.addEventListener('click', ()=>goTo(idx-1));
+    nextBtn.addEventListener('click', ()=>goTo(idx+1));
+
+    let tx=0;
+    track.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;},{passive:true});
+    track.addEventListener('touchend',e=>{
+      const dx=e.changedTouches[0].clientX-tx;
+      if(Math.abs(dx)>40) goTo(dx<0?idx+1:idx-1);
+    },{passive:true});
+
+    goTo(0);
+  })();
+
+  /* NEWS CAROUSEL */
+  (function(){
+    const track = document.getElementById('newsCarouselTrack');
+    if(!track) return;
+    const slides = track.querySelectorAll('.nc-slide');
+    const total = slides.length;
+    const prevBtn = document.getElementById('ncPrev');
+    const nextBtn = document.getElementById('ncNext');
+    const curEl = document.getElementById('ncCurrent');
+    const totEl = document.getElementById('ncTotal');
+    let idx = 0;
+    if(totEl) totEl.textContent = total;
+
+    function goTo(n) {
+      idx = Math.max(0, Math.min(total - 1, n));
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      if(curEl) curEl.textContent = idx + 1;
+      if(prevBtn) prevBtn.disabled = idx === 0;
+      if(nextBtn) nextBtn.disabled = idx === total - 1;
+    }
+
+    if(prevBtn) prevBtn.addEventListener('click', () => goTo(idx - 1));
+    if(nextBtn) nextBtn.addEventListener('click', () => goTo(idx + 1));
+
+    /* swipe touch */
+    let tx = 0;
+    track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - tx;
+      if(Math.abs(dx) > 50) goTo(dx < 0 ? idx + 1 : idx - 1);
+    }, {passive:true});
+
+    goTo(0);
+  })();
 
   /* SCROLL TOP */
   const scrollBtn=document.getElementById('scroll-top');
