@@ -10,6 +10,65 @@
 </head>
 <body class="chess-bg">
 
+<!-- ══════════════════════════════════════════
+   MOBILE NAVIGATION — Hamburger + Bottom Bar
+══════════════════════════════════════════ -->
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+<nav class="mobile-menu-panel" id="mobileMenuPanel" aria-hidden="true">
+  <button class="menu-close" id="menuClose" aria-label="Chiudi menu">&#10005;</button>
+
+  <div class="menu-section">
+    <div class="menu-section-title">Navigazione</div>
+    <a href="index.html">&#127968; Home</a>
+    <a href="index.html#notizie">&#128240; Notizie</a>
+    <a href="index.html#tornei">&#127942; Tornei</a>
+    <a href="index.html#elo">&#128202; ELO</a>
+    <a href="index.html#corsi">&#128218; Corsi</a>
+    <a href="index.html#chisiamo">&#10084; Chi Siamo</a>
+    <a href="index.html#direttivo">&#128101; Direttivo</a>
+  </div>
+
+  <div class="menu-section">
+    <div class="menu-section-title">Tesserati</div>
+    <a href="#adulti">&#9823; Adulti</a>
+    <a href="#giovani">&#9822; Giovani U18</a>
+  </div>
+
+  <div class="menu-section" style="margin-top:auto;padding-top:1.5rem;border-top:1px solid var(--border);">
+    <div class="menu-section-title">Contatti</div>
+    <a href="mailto:info@marrubiuredtal.it" style="font-size:13px;">info@marrubiuredtal.it</a>
+    <a href="tel:+393458434928" style="font-size:13px;">+39 345 843 4928</a>
+    <div style="display:flex;gap:1rem;margin-top:0.75rem;">
+      <a href="https://www.facebook.com/redtalmarrubiu/" target="_blank" style="border:none;padding:0;font-size:20px;">&#128104;</a>
+      <a href="https://www.instagram.com/red_tal_marrubiu/" target="_blank" style="border:none;padding:0;font-size:20px;">&#128247;</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="mobile-bottom-nav" id="mobileBottomNav">
+  <a href="index.html" data-section="home">
+    <span class="nav-icon">&#127968;</span><span>Home</span>
+  </a>
+  <a href="index.html#notizie" data-section="news">
+    <span class="nav-icon">&#128240;</span><span>Notizie</span>
+  </a>
+  <a href="index.html#tesserati" class="active" data-section="members">
+    <span class="nav-icon">&#9823;</span><span>Tesserati</span>
+  </a>
+  <a href="index.html#tornei" data-section="tournaments">
+    <span class="nav-icon">&#127942;</span><span>Tornei</span>
+  </a>
+  <a href="index.html#iscriviti" data-section="join">
+    <span class="nav-icon">&#9997;</span><span>Iscriviti</span>
+  </a>
+</nav>
+
+
 <nav>
   <a class="nav-logo" href="index.html">
     <div class="logo-emblem">
@@ -332,6 +391,55 @@
     scrollBtn.classList.toggle('visible', window.scrollY > 300);
   });
   scrollBtn.addEventListener('click', () => { window.scrollTo({top:0,behavior:'smooth'}); });
+
+
+  /* ═══════════════════════════════════════════
+     MOBILE MENU & BOTTOM NAV
+  ═══════════════════════════════════════════ */
+  (function(){
+    const btn = document.getElementById('mobileMenuBtn');
+    const overlay = document.getElementById('mobileMenuOverlay');
+    const panel = document.getElementById('mobileMenuPanel');
+    const closeBtn = document.getElementById('menuClose');
+    const links = panel.querySelectorAll('a');
+
+    function openMenu() {
+      btn.classList.add('active');
+      btn.setAttribute('aria-expanded', 'true');
+      overlay.classList.add('active');
+      panel.classList.add('active');
+      panel.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-expanded', 'false');
+      overlay.classList.remove('active');
+      panel.classList.remove('active');
+      panel.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    btn.addEventListener('click', () => {
+      panel.classList.contains('active') ? closeMenu() : openMenu();
+    });
+    overlay.addEventListener('click', closeMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    links.forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && panel.classList.contains('active')) closeMenu();
+    });
+  })();
+
+  /* BOTTOM NAV ACTIVE STATE */
+  (function(){
+    const bottomNav = document.getElementById('mobileBottomNav');
+    if (!bottomNav) return;
+    const links = bottomNav.querySelectorAll('a');
+    links.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes('tesserati')) link.classList.add('active');
+    });
+  })();
 </script>
 </body>
 </html>
