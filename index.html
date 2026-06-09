@@ -7,67 +7,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="img/red_tal.png" type="image/png">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/mobile.css">
 </head>
 <body class="chess-bg">
-
-<!-- ══════════════════════════════════════════
-   MOBILE NAVIGATION — Hamburger + Bottom Bar
-══════════════════════════════════════════ -->
-<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false">
-  <span></span><span></span><span></span>
-</button>
-
-<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-
-<nav class="mobile-menu-panel" id="mobileMenuPanel" aria-hidden="true">
-  <button class="menu-close" id="menuClose" aria-label="Chiudi menu">&#10005;</button>
-
-  <div class="menu-section">
-    <div class="menu-section-title">Navigazione</div>
-    <a href="#notizie">&#128240; Notizie</a>
-    <a href="#tesserati">&#9823; Tesserati</a>
-    <a href="#tornei">&#127942; Tornei</a>
-    <a href="#elo">&#128202; ELO</a>
-    <a href="#corsi">&#128218; Corsi</a>
-    <a href="#chisiamo">&#10084; Chi Siamo</a>
-    <a href="#direttivo">&#128101; Direttivo</a>
-  </div>
-
-  <div class="menu-section">
-    <div class="menu-section-title">Azioni</div>
-    <a href="#iscriviti" class="menu-cta">Iscriviti ora</a>
-    <a href="tesserati.html">&#8594; Tutti i tesserati</a>
-  </div>
-
-  <div class="menu-section" style="margin-top:auto;padding-top:1.5rem;border-top:1px solid var(--border);">
-    <div class="menu-section-title">Contatti</div>
-    <a href="mailto:info@marrubiuredtal.it" style="font-size:13px;">info@marrubiuredtal.it</a>
-    <a href="tel:+393458434928" style="font-size:13px;">+39 345 843 4928</a>
-    <div style="display:flex;gap:1rem;margin-top:0.75rem;">
-      <a href="https://www.facebook.com/redtalmarrubiu/" target="_blank" style="border:none;padding:0;font-size:20px;">&#128104;</a>
-      <a href="https://www.instagram.com/red_tal_marrubiu/" target="_blank" style="border:none;padding:0;font-size:20px;">&#128247;</a>
-    </div>
-  </div>
-</nav>
-
-<nav class="mobile-bottom-nav" id="mobileBottomNav">
-  <a href="index.html" class="active" data-section="home">
-    <span class="nav-icon">&#127968;</span><span>Home</span>
-  </a>
-  <a href="#notizie" data-section="news">
-    <span class="nav-icon">&#128240;</span><span>Notizie</span>
-  </a>
-  <a href="#tesserati" data-section="members">
-    <span class="nav-icon">&#9823;</span><span>Tesserati</span>
-  </a>
-  <a href="#tornei" data-section="tournaments">
-    <span class="nav-icon">&#127942;</span><span>Tornei</span>
-  </a>
-  <a href="#iscriviti" data-section="join">
-    <span class="nav-icon">&#9997;</span><span>Iscriviti</span>
-  </a>
-</nav>
-
 
 <nav>
   <a class="nav-logo" href="#">
@@ -79,6 +21,7 @@
       <span>Marrubiu — dal 2009</span>
     </div>
   </a>
+  <!-- Nav desktop -->
   <ul class="nav-links">
     <li><a href="#notizie">Notizie</a></li>
     <li><a href="#tesserati">Tesserati</a></li>
@@ -95,7 +38,34 @@
     </li>
     <li><a href="#iscriviti" class="nav-cta">Iscriviti</a></li>
   </ul>
+  <!-- Hamburger (solo mobile) -->
+  <button class="nav-hamburger" id="navHamburger" aria-label="Apri menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<!-- Menu mobile overlay -->
+<div class="nav-mobile-overlay" id="navMobileOverlay" aria-hidden="true">
+  <div class="nav-mobile-theme">
+    <span>Tema</span>
+    <button class="theme-toggle" id="themeToggleMobile" aria-label="Cambia tema">
+      <span class="toggle-icon-light">☀️</span>
+      <span class="toggle-icon-dark">🌙</span>
+      <div class="toggle-thumb"></div>
+    </button>
+  </div>
+  <ul class="nav-mobile-links">
+    <li><a href="#notizie">Notizie</a></li>
+    <li><a href="#tesserati">Tesserati</a></li>
+    <li><a href="#tornei">Tornei</a></li>
+    <li><a href="#elo">ELO</a></li>
+    <li><a href="#corsi">Corsi</a></li>
+    <li><a href="#chisiamo">Chi Siamo</a></li>
+  </ul>
+  <a href="#iscriviti" class="nav-mobile-cta">Iscriviti ora</a>
+</div>
 
 <header class="hero">
   <img src="img/red_tal.png" alt="" class="hero-logo-watermark" aria-hidden="true">
@@ -602,10 +572,40 @@
   const html = document.documentElement;
   const saved = localStorage.getItem('redtal-theme') || 'dark';
   html.setAttribute('data-theme', saved);
-  document.getElementById('themeToggle').addEventListener('click', () => {
+  function toggleTheme() {
     const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
     localStorage.setItem('redtal-theme', next);
+  }
+  document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+  const themeToggleMobile = document.getElementById('themeToggleMobile');
+  if(themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+
+  /* HAMBURGER MENU */
+  const hamburger = document.getElementById('navHamburger');
+  const mobileOverlay = document.getElementById('navMobileOverlay');
+  function closeMenu() {
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileOverlay.classList.remove('is-open');
+    mobileOverlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('nav-open');
+  }
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.contains('is-open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      hamburger.classList.add('is-open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      mobileOverlay.classList.add('is-open');
+      mobileOverlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('nav-open');
+    }
+  });
+  // Chiudi il menu al click su un link
+  mobileOverlay.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
   });
 
   /* TABS */
@@ -730,72 +730,6 @@
     scrollBtn.classList.toggle('visible', window.scrollY>300);
   });
   scrollBtn.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });
-
-
-  /* ═══════════════════════════════════════════
-     MOBILE MENU & BOTTOM NAV
-  ═══════════════════════════════════════════ */
-  (function(){
-    const btn = document.getElementById('mobileMenuBtn');
-    const overlay = document.getElementById('mobileMenuOverlay');
-    const panel = document.getElementById('mobileMenuPanel');
-    const closeBtn = document.getElementById('menuClose');
-    const links = panel.querySelectorAll('a');
-
-    function openMenu() {
-      btn.classList.add('active');
-      btn.setAttribute('aria-expanded', 'true');
-      overlay.classList.add('active');
-      panel.classList.add('active');
-      panel.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeMenu() {
-      btn.classList.remove('active');
-      btn.setAttribute('aria-expanded', 'false');
-      overlay.classList.remove('active');
-      panel.classList.remove('active');
-      panel.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-    btn.addEventListener('click', () => {
-      panel.classList.contains('active') ? closeMenu() : openMenu();
-    });
-    overlay.addEventListener('click', closeMenu);
-    closeBtn.addEventListener('click', closeMenu);
-    links.forEach(link => link.addEventListener('click', closeMenu));
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && panel.classList.contains('active')) closeMenu();
-    });
-  })();
-
-  /* BOTTOM NAV ACTIVE STATE */
-  (function(){
-    const bottomNav = document.getElementById('mobileBottomNav');
-    if (!bottomNav) return;
-    const links = bottomNav.querySelectorAll('a');
-    const hash = window.location.hash;
-    links.forEach(link => {
-      link.classList.remove('active');
-      if (!hash && link.getAttribute('href') === 'index.html') link.classList.add('active');
-      if (hash && link.getAttribute('href').includes(hash)) link.classList.add('active');
-    });
-    const sections = ['notizie','tesserati','tornei','elo','corsi','chisiamo','direttivo','iscriviti'];
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          links.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href').includes('#' + id));
-          });
-        }
-      });
-    }, { threshold: 0.3, rootMargin: '-60px 0px -40% 0px' });
-    sections.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-  })();
 </script>
 </body>
 </html>
