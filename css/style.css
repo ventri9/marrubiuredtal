@@ -2077,6 +2077,442 @@ footer {
 }
 
 /* ══════════════════════════════════════════
+   PALMARÈS
+══════════════════════════════════════════ */
+.palmares-section {
+  padding: 5rem 4rem;
+  background: var(--bg-deep);
+  border-top: 3px solid var(--red);
+}
+
+.palmares-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 0.5rem;
+}
+
+.palmares-year-group {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0 2rem;
+  align-items: start;
+}
+
+.palmares-year-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--red);
+  opacity: 0.35;
+  line-height: 1;
+  padding-top: 0.2rem;
+  text-align: right;
+  position: sticky;
+  top: 90px;
+}
+
+.palmares-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-left: 2px solid var(--border);
+  padding-left: 2rem;
+  position: relative;
+}
+
+.palmares-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  transition: border-color 0.2s, transform 0.2s;
+  position: relative;
+}
+
+/* pallino sulla linea */
+.palmares-item::before {
+  content: '';
+  position: absolute;
+  left: -2.6rem;
+  top: 1.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-md);
+  border: 2px solid var(--bg-deep);
+}
+
+.palmares-item.gold::before   { background: #d4a843; }
+.palmares-item.silver::before { background: #b0b0b0; }
+.palmares-item.bronze::before { background: #c07a40; }
+
+.palmares-item:hover {
+  border-color: rgba(192,57,43,0.35);
+  transform: translateX(4px);
+}
+
+.palmares-medal {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 0.1rem;
+}
+
+.palmares-body {
+  flex: 1;
+}
+
+.palmares-tag {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--red);
+  background: var(--red-dim);
+  border: 1px solid rgba(192,57,43,0.25);
+  padding: 2px 9px;
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.palmares-body h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.palmares-body p {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .palmares-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .palmares-year-group {
+    grid-template-columns: 50px 1fr;
+    gap: 0 1rem;
+  }
+
+  .palmares-year-label {
+    font-size: 1.4rem;
+    position: static;
+  }
+
+  .palmares-items {
+    padding-left: 1.25rem;
+  }
+
+  .palmares-item::before {
+    left: -1.75rem;
+  }
+
+  .palmares-item {
+    padding: 1rem 1.1rem;
+    gap: 0.85rem;
+  }
+
+  .palmares-medal {
+    font-size: 1.6rem;
+  }
+}
+
+/* ══════════════════════════════════════════
+   ELO — TOGGLE VISTE (spiegazione ↔ classifica)
+══════════════════════════════════════════ */
+.elo-views-wrap {
+  position: relative;
+  min-height: 200px;
+}
+
+.elo-view {
+  transition: opacity 0.28s ease, transform 0.28s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.elo-view--hidden {
+  display: none;
+}
+
+.elo-view--out {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+
+.elo-view--in {
+  animation: eloFadeIn 0.35s ease forwards;
+}
+
+@keyframes eloFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Bottone switch (stile btn-outline ma senza tag <a>) */
+.elo-switch-btn {
+  background: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  text-align: left;
+}
+
+/* ── CLASSIFICA INTERNA ── */
+.elo-ranking-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.elo-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid var(--border-md);
+  color: var(--red);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.elo-back-btn:hover {
+  border-color: var(--red);
+  background: var(--red-dim);
+}
+
+.elo-ranking-note {
+  font-size: 12px;
+  color: var(--muted2);
+  letter-spacing: 0.5px;
+}
+
+/* Tabs classifica */
+.elo-ranking-tabs {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border-md);
+  border-radius: 4px;
+  overflow: hidden;
+  width: fit-content;
+  margin-bottom: 1.5rem;
+}
+
+.elo-rtab {
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 10px 22px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-right: 1px solid var(--border-md);
+}
+
+.elo-rtab:last-child {
+  border-right: none;
+}
+
+.elo-rtab.active {
+  background: var(--red);
+  color: #fff;
+  font-weight: 600;
+}
+
+.elo-rtab:hover:not(.active) {
+  background: var(--red-dim);
+  color: var(--red);
+}
+
+/* Panel visibilità */
+.elo-rank-panel {
+  display: none;
+}
+.elo-rank-panel.active {
+  display: block;
+}
+
+/* Tabella classifica */
+.elo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.elo-table thead tr {
+  background: var(--bg-card2);
+  border-bottom: 2px solid var(--red);
+}
+
+.elo-table thead th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.elo-table thead th:first-child { width: 52px; text-align: center; }
+.elo-table thead th:nth-child(4),
+.elo-table thead th:nth-child(5) { text-align: right; }
+
+.elo-row {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.elo-row:last-child { border-bottom: none; }
+
+.elo-row:hover {
+  background: var(--red-dim);
+}
+
+.elo-row.rank-1 { background: rgba(212, 168, 67, 0.05); }
+.elo-row.rank-2 { background: rgba(176, 176, 176, 0.04); }
+.elo-row.rank-3 { background: rgba(192, 122, 64, 0.04); }
+
+.elo-table td {
+  padding: 13px 16px;
+  vertical-align: middle;
+  color: var(--text);
+}
+
+.elo-pos { text-align: center; }
+
+.pos-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-card2);
+  border: 1px solid var(--border-md);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+}
+.pos-badge.gold   { background: rgba(212,168,67,0.18); border-color: rgba(212,168,67,0.5); color: #d4a843; }
+.pos-badge.silver { background: rgba(176,176,176,0.15); border-color: rgba(176,176,176,0.4); color: #aaa; }
+.pos-badge.bronze { background: rgba(192,122,64,0.15); border-color: rgba(192,122,64,0.4); color: #c07a40; }
+
+.elo-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.elo-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--red-dim);
+  border: 1px solid rgba(192,57,43,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.elo-title-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  border: 1px solid;
+}
+.elo-title-badge.cm     { color: var(--red); background: var(--red-dim); border-color: rgba(192,57,43,0.3); }
+.elo-title-badge.prima  { color: #b87a4a; background: rgba(160,100,60,0.08); border-color: rgba(160,100,60,0.3); }
+.elo-title-badge.seconda{ color: #7a7aaa; background: rgba(120,120,170,0.08); border-color: rgba(120,120,170,0.25); }
+.elo-title-badge.terza  { color: var(--muted); background: rgba(120,120,120,0.07); border-color: rgba(120,120,120,0.20); }
+
+.elo-score {
+  text-align: right;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 0.5px;
+}
+
+.elo-games {
+  text-align: right;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.elo-disclaimer {
+  margin-top: 1.25rem;
+  font-size: 12px;
+  color: var(--muted2);
+  text-align: right;
+}
+
+.elo-disclaimer a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.elo-disclaimer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tabella */
+@media (max-width: 768px) {
+  .elo-ranking-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .elo-table thead th:nth-child(5) { display: none; }
+  .elo-table td:nth-child(5) { display: none; }
+
+  .elo-table td { padding: 11px 10px; }
+  .elo-table thead th { padding: 10px 10px; }
+
+  .elo-name { gap: 8px; font-size: 13px; }
+
+  .elo-avatar { width: 30px; height: 30px; font-size: 10px; }
+
+  .elo-score { font-size: 1rem; }
+
+  .elo-disclaimer { text-align: left; }
+}
+
+/* ══════════════════════════════════════════
    PAGINA TESSERATI
 ══════════════════════════════════════════ */
 
@@ -2380,30 +2816,635 @@ footer {
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════
-   MOBILE-FIRST REDESIGN — ASD RED TAL
-   Aggiunto: hamburger menu, bottom nav, hero semplificato, layout touch
-   ═══════════════════════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════
+   PAGINA C.I.S.
+══════════════════════════════════════════ */
 
-/* ============================================
-   VARIABILI MOBILE
-============================================ */
-:root {
-  --mobile-nav-height: 60px;
-  --mobile-bottom-nav-height: 64px;
-  --mobile-section-padding: 1.5rem;
-  --mobile-card-radius: 12px;
-  --mobile-touch-target: 48px;
+/* Hero CIS */
+.cis-hero {
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 4rem 4rem;
+  background: linear-gradient(135deg, #1a0808 0%, #3d1210 55%, #1c0706 100%);
+  position: relative;
+  overflow: hidden;
+  margin-top: 72px;
 }
 
-/* ============================================
-   HAMBURGER BUTTON (hidden on desktop)
-============================================ */
-.mobile-menu-btn,
-.mobile-menu-overlay,
-.mobile-menu-panel,
-.mobile-bottom-nav {
+[data-theme="light"] .cis-hero {
+  background: linear-gradient(135deg, #f5ede6 0%, #fdf7f2 45%, #f8f0e8 100%);
+}
+
+.cis-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 80% at 15% 100%, rgba(192,57,43,0.22) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Scacchiera decorativa hero */
+.cis-hero-bg {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%) rotate(6deg);
+  width: 480px;
+  height: 480px;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image:
+    repeating-conic-gradient(rgba(192,57,43,0.6) 0% 25%, transparent 0% 50%);
+  background-size: 60px 60px;
+}
+
+[data-theme="light"] .cis-hero-bg { display: none; }
+
+.cis-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.cis-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.05;
+  margin: 1rem 0 1.25rem;
+}
+
+.cis-hero-title em {
+  font-style: normal;
+  color: var(--red);
+}
+
+.cis-hero-stats {
+  display: flex;
+  gap: 0;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+[data-theme="light"] .cis-hero-stats {
+  border-top-color: rgba(0,0,0,0.1);
+}
+
+.cis-hstat {
+  flex: 1;
+  padding: 0 1.5rem;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+[data-theme="light"] .cis-hstat {
+  border-right-color: rgba(0,0,0,0.1);
+}
+
+.cis-hstat:first-child { padding-left: 0; }
+.cis-hstat:last-child  { border-right: none; }
+
+.cis-hstat-n {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+}
+
+.cis-hstat-l {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* Sezioni CIS */
+.cis-section {
+  padding: 5rem 4rem;
+  background: var(--bg);
+}
+
+.cis-section--alt {
+  background: var(--bg-deep);
+  border-top: 3px solid var(--red);
+}
+
+.cis-section-head {
+  margin-bottom: 3rem;
+}
+
+.cis-section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cis-section-desc {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 760px;
+  margin-top: 1.25rem;
+}
+
+/* Badge serie */
+.cis-serie-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 2px;
+  border: 1px solid;
+}
+
+.cis-serie-a1   { color: #d4a843; background: rgba(212,168,67,0.12); border-color: rgba(212,168,67,0.4); }
+.cis-serie-a2   { color: var(--red); background: var(--red-dim); border-color: rgba(192,57,43,0.4); }
+.cis-serie-c    { color: #7a7aaa; background: rgba(120,120,170,0.1); border-color: rgba(120,120,170,0.3); }
+.cis-serie-promo{ color: #5a8a5a; background: rgba(90,138,90,0.1); border-color: rgba(90,138,90,0.3); }
+
+.cis-retrocessa-note {
+  font-size: 11px;
+  color: var(--muted2);
+  letter-spacing: 0.5px;
+}
+
+/* Card capitano prima squadra */
+.cis-captain-wrap {
+  margin-bottom: 3rem;
+}
+
+.cis-captain-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--red);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.cis-captain-card:hover {
+  border-color: rgba(192,57,43,0.5);
+}
+
+.cis-captain-photo {
+  position: relative;
+  background: var(--bg-card2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  overflow: hidden;
+}
+
+.cis-captain-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+
+.cis-captain-card:hover .cis-captain-photo img {
+  transform: scale(1.04);
+}
+
+.cis-captain-placeholder {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--red);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.cis-captain-photo img ~ .cis-captain-placeholder { display: none; }
+
+.cis-captain-body {
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.cis-captain-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--red);
+  background: var(--red-dim);
+  border: 1px solid rgba(192,57,43,0.3);
+  padding: 4px 12px;
+  border-radius: 2px;
+  width: fit-content;
+}
+
+.cis-captain-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+}
+
+.cis-captain-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cis-captain-bio {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-top: 0.5rem;
+  max-width: 560px;
+}
+
+/* Rosa */
+.cis-rosa-head {
+  margin-bottom: 1.25rem;
+}
+
+.cis-rosa-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+
+.cis-rosa-sub {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted2);
+}
+
+.cis-rosa-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.cis-player-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.cis-player-card:hover {
+  border-color: rgba(192,57,43,0.4);
+  transform: translateY(-3px);
+}
+
+.cis-player--captain {
+  border-color: rgba(192,57,43,0.3);
+  box-shadow: 0 0 0 1px rgba(192,57,43,0.15);
+}
+
+.cis-player-board {
+  background: var(--red);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.cis-player-photo-wrap {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: var(--bg-card2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cis-player-photo-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+
+.cis-player-card:hover .cis-player-photo-wrap img { transform: scale(1.05); }
+
+.cis-player-placeholder {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--red);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.cis-player-photo-wrap img ~ .cis-player-placeholder { display: none; }
+
+.cis-player-info {
+  padding: 0.75rem;
+}
+
+.cis-player-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+
+.cis-player-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.cis-cap-icon {
+  font-size: 10px;
+  color: var(--red);
+  letter-spacing: 0.5px;
+}
+
+/* ACCORDION altre squadre */
+.cis-teams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cis-team-row {
+  border-bottom: 1px solid var(--border);
+}
+
+.cis-team-row:last-child { border-bottom: none; }
+
+.cis-team-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: var(--bg-card);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: left;
+  gap: 1rem;
+}
+
+.cis-team-toggle:hover {
+  background: var(--bg-card2);
+}
+
+.cis-team-toggle[aria-expanded="true"] {
+  background: var(--bg-card2);
+  border-bottom: 1px solid var(--border);
+}
+
+.cis-team-toggle-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cis-team-toggle-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cis-team-toggle-name {
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.cis-team-toggle-sub {
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: var(--muted2);
+  text-transform: uppercase;
+}
+
+.cis-team-arrow {
+  font-size: 18px;
+  color: var(--red);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+/* Panel accordion */
+.cis-team-panel {
   display: none;
+  padding: 1.75rem 2rem 2rem;
+  background: var(--bg);
+  animation: cisPanelIn 0.25s ease;
+}
+
+.cis-team-panel.is-open {
+  display: block;
+}
+
+@keyframes cisPanelIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Riga capitano nel panel */
+.cis-team-captain-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--red-dim);
+  border: 1px solid rgba(192,57,43,0.2);
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+}
+
+/* Mini roster */
+.cis-mini-roster {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.cis-mini-player {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color 0.15s;
+}
+
+.cis-mini-player:hover {
+  border-color: rgba(192,57,43,0.3);
+}
+
+.cis-mini-board {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--red);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cis-mini-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--bg-card2);
+  border: 1px solid var(--border-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.cis-mini-player-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cis-mini-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.cis-mini-elo {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+}
+
+/* ── Responsive CIS ── */
+@media (max-width: 1200px) {
+  .cis-rosa-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cis-hero {
+    padding: 80px 1.25rem 2.5rem;
+    min-height: auto;
+    margin-top: 60px;
+    align-items: flex-start;
+  }
+
+  .cis-hero-bg { display: none; }
+
+  .cis-hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .cis-hero-stats {
+    gap: 0;
+  }
+
+  .cis-hstat {
+    padding: 0 0.75rem;
+  }
+
+  .cis-hstat-n { font-size: 1.5rem; }
+
+  .cis-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .cis-captain-card {
+    grid-template-columns: 1fr;
+  }
+
+  .cis-captain-photo {
+    min-height: 220px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .cis-captain-body {
+    padding: 1.5rem;
+  }
+
+  .cis-captain-name { font-size: 1.4rem; }
+
+  .cis-rosa-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .cis-player-photo-wrap {
+    aspect-ratio: 1 / 1;
+  }
+
+  .cis-team-toggle {
+    padding: 1.1rem 1.25rem;
+  }
+
+  .cis-mini-roster {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .cis-team-panel {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cis-rosa-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cis-player-name { font-size: 12px; }
+
+  .cis-hstat-l { font-size: 9px; letter-spacing: 0.5px; }
 }
 
 /* ══════════════════════════════════════════
@@ -2953,5 +3994,163 @@ footer {
 
   .section-title {
     font-size: 1.5rem;
+  }
+}
+/* ══════════════════════════════════════════
+   CIS BANNER — Tornei section
+══════════════════════════════════════════ */
+.cis-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 1.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 1px;
+  flex-wrap: wrap;
+}
+
+.cis-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cis-banner-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.cis-banner-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.cis-banner-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.cis-banner-btn-int,
+.cis-banner-btn-ext {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.cis-banner-btn-int {
+  background: var(--red);
+  color: #fff;
+  border: 1px solid var(--red);
+}
+
+.cis-banner-btn-int:hover {
+  background: var(--red-light);
+  border-color: var(--red-light);
+}
+
+.cis-banner-btn-ext {
+  background: transparent;
+  color: var(--red);
+  border: 1px solid rgba(192, 57, 43, 0.4);
+}
+
+.cis-banner-btn-ext:hover {
+  background: var(--red-dim);
+  border-color: var(--red);
+}
+
+/* ══════════════════════════════════════════
+   PALMARÈS LINKS
+══════════════════════════════════════════ */
+.palmares-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.palmares-link-int,
+.palmares-link-ext {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.palmares-link-int {
+  background: var(--red);
+  color: #fff;
+  border: 1px solid var(--red);
+}
+
+.palmares-link-int:hover {
+  background: var(--red-light);
+  border-color: var(--red-light);
+}
+
+.palmares-link-ext {
+  background: transparent;
+  color: var(--red);
+  border: 1px solid rgba(192, 57, 43, 0.4);
+}
+
+.palmares-link-ext:hover {
+  background: var(--red-dim);
+  border-color: var(--red);
+}
+
+/* Responsive CIS banner & palmares links */
+@media (max-width: 768px) {
+  .cis-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .cis-banner-right {
+    width: 100%;
+  }
+
+  .cis-banner-btn-int,
+  .cis-banner-btn-ext {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .palmares-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .palmares-link-int,
+  .palmares-link-ext {
+    justify-content: center;
   }
 }

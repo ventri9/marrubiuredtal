@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="img/red_tal.png" type="image/png">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/mobile.css">
+<base target="_blank">
 </head>
 <body class="chess-bg">
 
@@ -24,8 +24,13 @@
   <!-- Nav desktop -->
   <ul class="nav-links">
     <li><a href="#notizie">Notizie</a></li>
-    <li><a href="#tesserati">Tesserati</a></li>
+    <li><a href="tesserati.html">Tesserati</a></li>
+    <li class="nav-cis-group">
+      <a href="cis.html">C.I.S.</a>
+      <a href="https://www.federscacchi.it/cis" target="_blank" class="nav-cis-ext" title="Sito ufficiale FSI C.I.S." aria-label="FSI C.I.S. — sito esterno">↗</a>
+    </li>
     <li><a href="#tornei">Tornei</a></li>
+    <li><a href="#palmares">Palmarès</a></li>
     <li><a href="#elo">ELO</a></li>
     <li><a href="#corsi">Corsi</a></li>
     <li><a href="#chisiamo">Chi Siamo</a></li>
@@ -58,8 +63,13 @@
   </div>
   <ul class="nav-mobile-links">
     <li><a href="#notizie">Notizie</a></li>
-    <li><a href="#tesserati">Tesserati</a></li>
+    <li><a href="tesserati.html">Tesserati</a></li>
+    <li class="nav-mobile-cis-row">
+      <a href="cis.html">C.I.S.</a>
+      <a href="https://www.federscacchi.it/cis" target="_blank" class="nav-mobile-ext">FSI ↗</a>
+    </li>
     <li><a href="#tornei">Tornei</a></li>
+    <li><a href="#palmares">Palmarès</a></li>
     <li><a href="#elo">ELO</a></li>
     <li><a href="#corsi">Corsi</a></li>
     <li><a href="#chisiamo">Chi Siamo</a></li>
@@ -290,6 +300,20 @@
     <a href="#" class="see-all">Archivio completo →</a>
   </div>
   <div class="tornei-list fade-up">
+    <!-- Banner CIS -->
+    <div class="cis-banner fade-up">
+      <div class="cis-banner-left">
+        <span class="cis-serie-badge cis-serie-a2">Serie A2</span>
+        <div>
+          <div class="cis-banner-title">Campionato Italiano a Squadre</div>
+          <div class="cis-banner-sub">Il Red Tal partecipa con 3 squadre nelle serie nazionali e regionali</div>
+        </div>
+      </div>
+      <div class="cis-banner-right">
+        <a href="cis.html" class="cis-banner-btn-int">Le nostre squadre →</a>
+        <a href="https://www.federscacchi.it/cis" target="_blank" class="cis-banner-btn-ext">FSI C.I.S. ↗</a>
+      </div>
+    </div>
     <div class="torneo-row">
       <div class="torneo-name"><h4>CIG 2025 — Campionato Regionale Sardegna U18</h4><p>Marrubiu · 13 Aprile 2025 · ELO Rapid FIDE</p></div>
       <div class="torneo-meta"><div class="val">32</div><div class="key">Partecipanti</div></div>
@@ -323,8 +347,93 @@
   </div>
 </section>
 
+<!-- PALMARÈS -->
+<section class="palmares-section" id="palmares">
+  <div class="section-header fade-up">
+    <div>
+      <p class="section-tag">Storia e risultati</p>
+      <h2 class="section-title">Palmarès</h2>
+      <div class="divider"></div>
+    </div>
+  </div>
+  <div class="palmares-timeline fade-up">
+
+    <div class="palmares-year-group">
+      <div class="palmares-year-label">2024</div>
+      <div class="palmares-items">
+        <div class="palmares-item gold">
+          <div class="palmares-medal">🥇</div>
+          <div class="palmares-body">
+            <span class="palmares-tag">Campionati Italiani Giovanili</span>
+            <h4>Victoria Garau — Campionessa Italiana U8 Femminile</h4>
+            <p>Salsomaggiore Terme. Victoria conquista il titolo di Campionessa Italiana nella categoria U8 Femminile, primo titolo nazionale in assoluto per il circolo.</p>
+          </div>
+        </div>
+        <div class="palmares-item silver">
+          <div class="palmares-medal">🥈</div>
+          <div class="palmares-body">
+            <span class="palmares-tag">Campionato Regionale Assoluto</span>
+            <h4>Alessandro Altea — 2° classificato, Sardegna</h4>
+            <p>Ottima prestazione di Altea nel campionato regionale, a un passo dal titolo con una stagione di grande continuità.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="palmares-year-group">
+      <div class="palmares-year-label">2025</div>
+      <div class="palmares-items">
+        <div class="palmares-item bronze">
+          <div class="palmares-medal">🥉</div>
+          <div class="palmares-body">
+            <span class="palmares-tag">Campionato Regionale Assoluto</span>
+            <h4>Alessandro Altea — 3° classificato, Sardegna</h4>
+            <p>Conferma sul podio regionale per Altea, che consolida il suo ruolo di riferimento tra i giocatori sardi di vertice.</p>
+          </div>
+        </div>
+        <div class="palmares-item gold">
+          <div class="palmares-medal">🏆</div>
+          <div class="palmares-body">
+            <span class="palmares-tag">C.I.S. — Campionato Italiano a Squadre</span>
+            <h4>Promozione in Serie A1</h4>
+            <p>Roma. Il Red Tal conquista la promozione nella massima serie del Campionato Italiano a Squadre, traguardo storico per un circolo della Sardegna.</p>
+            <div class="palmares-links">
+              <a href="cis.html" class="palmares-link-int">Le nostre squadre →</a>
+              <a href="https://www.federscacchi.it/cis" target="_blank" class="palmares-link-ext">C.I.S. su FSI ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="palmares-year-group">
+      <div class="palmares-year-label">2026</div>
+      <div class="palmares-items">
+        <div class="palmares-item bronze">
+          <div class="palmares-medal">🥉</div>
+          <div class="palmares-body">
+            <span class="palmares-tag">Coppa Città di Tempio 2026</span>
+            <h4>Gianluca Mameli — 3° classificato</h4>
+            <p>Terzo posto per Mameli in un torneo di alto livello tecnico, con una prestazione convincente nelle ultime tre partite decisive.</p>
+          </div>
+        </div>
+        <div class="palmares-item gold">
+          <div class="palmares-medal">🥇</div>
+          <div class="palmares-body">
+            <span class="palmares-tag">Campionato Interprovinciale</span>
+            <h4>Victoria Garau — 1ª classificata</h4>
+            <p>Cagliari. Victoria vince il campionato interprovinciale con un punteggio pieno, confermandosi la più forte della sua fascia d'età in Sardegna.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ELO -->
 <section class="elo-section" id="elo">
+
   <div class="section-header fade-up">
     <div>
       <p class="section-tag">Sistema di valutazione</p>
@@ -332,25 +441,156 @@
       <div class="divider"></div>
     </div>
   </div>
-  <div class="elo-explainer fade-up">
-    <div class="elo-text">
-      <p>Il sistema ELO è il metodo internazionale di classificazione dei giocatori di scacchi, sviluppato dal fisico Arpad Elo. Misura la forza relativa dei giocatori basandosi sui risultati delle partite ufficiali.</p>
-      <p>Ogni vittoria contro un avversario più forte aumenta maggiormente il punteggio. Una sconfitta contro un avversario più debole lo fa calare di più. Il sistema premia la costanza e la partecipazione ai tornei ufficiali FIDE e FSI.</p>
-      <p>I nostri tesserati partecipano regolarmente a tornei con variazione ELO, contribuendo a costruire il loro profilo internazionale nel database FIDE.</p>
-      <p>Vanto unico del nostro circolo: abbiamo cresciuto il primo e unico <strong style="color:var(--red)">Grande Maestro della Sardegna</strong>, Francesco Sonis, formatosi con noi grazie a un lavoro intenso, disciplina e passione assoluta.</p>
-      <a href="https://ratings.fide.com" target="_blank" class="btn-outline" style="margin-top:1rem;">Cerca su FIDE Ratings →</a>
+
+  <!-- Wrapper che contiene entrambe le viste -->
+  <div class="elo-views-wrap">
+
+    <!-- VISTA 1: Spiegazione ELO (default) -->
+    <div class="elo-view" id="eloViewExplainer">
+      <div class="elo-explainer fade-up">
+        <div class="elo-text">
+          <p>Il sistema ELO è il metodo internazionale di classificazione dei giocatori di scacchi, sviluppato dal fisico Arpad Elo. Misura la forza relativa dei giocatori basandosi sui risultati delle partite ufficiali.</p>
+          <p>Ogni vittoria contro un avversario più forte aumenta maggiormente il punteggio. Una sconfitta contro un avversario più debole lo fa calare di più. Il sistema premia la costanza e la partecipazione ai tornei ufficiali FIDE e FSI.</p>
+          <p>I nostri tesserati partecipano regolarmente a tornei con variazione ELO, contribuendo a costruire il loro profilo internazionale nel database FIDE.</p>
+          <p>Vanto unico del nostro circolo: abbiamo cresciuto il primo e unico <strong style="color:var(--red)">Grande Maestro della Sardegna</strong>, Francesco Sonis, formatosi con noi grazie a un lavoro intenso, disciplina e passione assoluta.</p>
+          <div style="display:flex;flex-direction:column;gap:.75rem;margin-top:1.5rem;">
+            <a href="https://ratings.fide.com" target="_blank" class="btn-outline">Cerca su FIDE Ratings →</a>
+            <button class="btn-outline elo-switch-btn" id="eloShowRanking">Classifica ELO Red Tal →</button>
+          </div>
+        </div>
+        <div class="elo-scale">
+          <div class="elo-tier"><div class="elo-range">2500+</div><div class="elo-tier-name">Grande Maestro (GM)</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:100%;background:var(--red);"></div></div></div>
+          <div class="elo-tier"><div class="elo-range">2400</div><div class="elo-tier-name">Maestro Internazionale (IM)</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:88%;background:var(--red);"></div></div></div>
+          <div class="elo-tier"><div class="elo-range">2300</div><div class="elo-tier-name">Maestro FIDE (FM)</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:76%;background:#c0c0c0;"></div></div></div>
+          <div class="elo-tier"><div class="elo-range">2200</div><div class="elo-tier-name">Maestro (M)</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:64%;background:#c0c0c0;"></div></div></div>
+          <div class="elo-tier"><div class="elo-range">2000</div><div class="elo-tier-name">Candidato Maestro (CM)</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:52%;background:#b87340;"></div></div></div>
+          <div class="elo-tier"><div class="elo-range">1800</div><div class="elo-tier-name">1ª Nazionale</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:38%;background:#5a8a5a;"></div></div></div>
+          <div class="elo-tier"><div class="elo-range">1600</div><div class="elo-tier-name">2ª Nazionale</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:28%;background:var(--muted);"></div></div></div>
+          <div class="elo-tier"><div class="elo-range">1500</div><div class="elo-tier-name">3ª Nazionale</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:18%;background:var(--muted);"></div></div></div>
+          <div class="elo-tier"><div class="elo-range">&lt;1500</div><div class="elo-tier-name">Non Classificato</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:8%;background:var(--muted2);"></div></div></div>
+        </div>
+      </div>
     </div>
-    <div class="elo-scale">
-      <div class="elo-tier"><div class="elo-range">2500+</div><div class="elo-tier-name">Grande Maestro (GM)</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:100%;background:var(--red);"></div></div></div>
-      <div class="elo-tier"><div class="elo-range">2400</div><div class="elo-tier-name">Maestro Internazionale (IM)</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:88%;background:var(--red);"></div></div></div>
-      <div class="elo-tier"><div class="elo-range">2300</div><div class="elo-tier-name">Maestro FIDE (FM)</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:76%;background:#c0c0c0;"></div></div></div>
-      <div class="elo-tier"><div class="elo-range">2200</div><div class="elo-tier-name">Maestro (M)</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:64%;background:#c0c0c0;"></div></div></div>
-      <div class="elo-tier"><div class="elo-range">2000</div><div class="elo-tier-name">Candidato Maestro (CM)</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:52%;background:#b87340;"></div></div></div>
-      <div class="elo-tier"><div class="elo-range">1800</div><div class="elo-tier-name">1ª Nazionale</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:38%;background:#5a8a5a;"></div></div></div>
-      <div class="elo-tier"><div class="elo-range">1600</div><div class="elo-tier-name">2ª Nazionale</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:28%;background:var(--muted);"></div></div></div>
-      <div class="elo-tier"><div class="elo-range">1500</div><div class="elo-tier-name">3ª Nazionale</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:18%;background:var(--muted);"></div></div></div>
-      <div class="elo-tier"><div class="elo-range">&lt;1500</div><div class="elo-tier-name">Non Classificato</div><div class="elo-bar-wrap"><div class="elo-bar" style="width:8%;background:var(--muted2);"></div></div></div>
+
+    <!-- VISTA 2: Classifica interna (nascosta di default) -->
+    <div class="elo-view elo-view--hidden" id="eloViewRanking">
+      <div class="elo-ranking-header fade-up">
+        <button class="elo-back-btn" id="eloBackBtn">← Torna alla spiegazione ELO</button>
+        <p class="elo-ranking-note">Classifica aggiornata al giugno 2026 · Solo tesserati FIDE attivi</p>
+      </div>
+
+      <div class="elo-ranking-tabs fade-up">
+        <button class="elo-rtab active" onclick="switchEloTab(this,'adulti')">♙ Adulti</button>
+        <button class="elo-rtab" onclick="switchEloTab(this,'giovani')">♟ Giovani (U18)</button>
+      </div>
+
+      <!-- Adulti -->
+      <div class="elo-rank-panel active" id="eloPanel-adulti">
+        <table class="elo-table fade-up">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Giocatore</th>
+              <th>Titolo</th>
+              <th>ELO FIDE</th>
+              <th>Partite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="elo-row rank-1">
+              <td class="elo-pos"><span class="pos-badge gold">1</span></td>
+              <td class="elo-name"><div class="elo-avatar">AA</div>Alessandro Altea</td>
+              <td><span class="elo-title-badge cm">CM</span></td>
+              <td class="elo-score">2099</td>
+              <td class="elo-games">34</td>
+            </tr>
+            <tr class="elo-row rank-2">
+              <td class="elo-pos"><span class="pos-badge silver">2</span></td>
+              <td class="elo-name"><div class="elo-avatar">GM</div>Gianluca Mameli</td>
+              <td><span class="elo-title-badge cm">CM</span></td>
+              <td class="elo-score">2015</td>
+              <td class="elo-games">28</td>
+            </tr>
+            <tr class="elo-row rank-3">
+              <td class="elo-pos"><span class="pos-badge bronze">3</span></td>
+              <td class="elo-name"><div class="elo-avatar">MC</div>Mattia Corrias</td>
+              <td><span class="elo-title-badge prima">1ª</span></td>
+              <td class="elo-score">1892</td>
+              <td class="elo-games">21</td>
+            </tr>
+            <tr class="elo-row">
+              <td class="elo-pos"><span class="pos-badge">4</span></td>
+              <td class="elo-name"><div class="elo-avatar">DS</div>Daniele Spiga</td>
+              <td><span class="elo-title-badge seconda">2ª</span></td>
+              <td class="elo-score">1744</td>
+              <td class="elo-games">18</td>
+            </tr>
+            <tr class="elo-row">
+              <td class="elo-pos"><span class="pos-badge">5</span></td>
+              <td class="elo-name"><div class="elo-avatar">AP</div>Antonello Pannella</td>
+              <td><span class="elo-title-badge seconda">2ª</span></td>
+              <td class="elo-score">1680</td>
+              <td class="elo-games">14</td>
+            </tr>
+            <tr class="elo-row">
+              <td class="elo-pos"><span class="pos-badge">6</span></td>
+              <td class="elo-name"><div class="elo-avatar">LP</div>Leopoldo Pannella</td>
+              <td><span class="elo-title-badge terza">3ª</span></td>
+              <td class="elo-score">1571</td>
+              <td class="elo-games">11</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Giovani -->
+      <div class="elo-rank-panel" id="eloPanel-giovani">
+        <table class="elo-table fade-up">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Giocatore</th>
+              <th>Cat.</th>
+              <th>ELO FIDE</th>
+              <th>Partite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="elo-row rank-1">
+              <td class="elo-pos"><span class="pos-badge gold">1</span></td>
+              <td class="elo-name"><div class="elo-avatar">VG</div>Victoria Garau</td>
+              <td><span class="elo-title-badge cm">U10F</span></td>
+              <td class="elo-score">1340</td>
+              <td class="elo-games">42</td>
+            </tr>
+            <tr class="elo-row rank-2">
+              <td class="elo-pos"><span class="pos-badge silver">2</span></td>
+              <td class="elo-name"><div class="elo-avatar">MS</div>Marco Scanu</td>
+              <td><span class="elo-title-badge prima">U14</span></td>
+              <td class="elo-score">1210</td>
+              <td class="elo-games">19</td>
+            </tr>
+            <tr class="elo-row rank-3">
+              <td class="elo-pos"><span class="pos-badge bronze">3</span></td>
+              <td class="elo-name"><div class="elo-avatar">AL</div>Andrea Loi</td>
+              <td><span class="elo-title-badge seconda">U16</span></td>
+              <td class="elo-score">1155</td>
+              <td class="elo-games">15</td>
+            </tr>
+            <tr class="elo-row">
+              <td class="elo-pos"><span class="pos-badge">4</span></td>
+              <td class="elo-name"><div class="elo-avatar">FP</div>Fabio Piras</td>
+              <td><span class="elo-title-badge terza">U18</span></td>
+              <td class="elo-score">1088</td>
+              <td class="elo-games">12</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="elo-disclaimer">I dati ELO sono indicativi. Per i rating ufficiali consulta <a href="https://ratings.fide.com" target="_blank">ratings.fide.com</a></p>
     </div>
+
   </div>
 </section>
 
@@ -482,6 +722,7 @@
 
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
+          <div class="direttivo-photo-placeholder">LP</div>
             <img src="img/leopoldo-pannella.png" alt="Leopoldo Pannella"> 
           </div>
         <div class="direttivo-info">
@@ -529,8 +770,10 @@
       <h5>Navigazione</h5>
       <ul>
         <li><a href="#notizie">Notizie</a></li>
-        <li><a href="#tesserati">Tesserati</a></li>
+        <li><a href="tesserati.html">Tesserati</a></li>
+        <li><a href="cis.html">C.I.S.</a></li>
         <li><a href="#tornei">Tornei</a></li>
+        <li><a href="#palmares">Palmarès</a></li>
         <li><a href="#elo">Punteggio ELO</a></li>
         <li><a href="#corsi">Corsi</a></li>
         <li><a href="#chisiamo">Chi Siamo</a></li>
@@ -540,8 +783,9 @@
     <div class="footer-col">
       <h5>Sezioni</h5>
       <ul>
-        <li><a href="#tesserati">Tesserati Adulti</a></li>
-        <li><a href="#tesserati">Giovani U18</a></li>
+        <li><a href="tesserati.html">Tesserati Adulti</a></li>
+        <li><a href="tesserati.html#giovani">Giovani U18</a></li>
+        <li><a href="cis.html#prima-squadra">Prima Squadra CIS</a></li>
         <li><a href="#tornei">Calendario Tornei</a></li>
         <li><a href="#direttivo">Direttivo</a></li>
         <li><a href="#iscriviti">Iscrizioni</a></li>
@@ -729,6 +973,47 @@
     scrollBtn.classList.toggle('visible', window.scrollY>300);
   });
   scrollBtn.addEventListener('click',()=>{ window.scrollTo({top:0,behavior:'smooth'}); });
+  /* ELO TOGGLE — spiegazione ↔ classifica */
+  (function(){
+    const viewExplainer = document.getElementById('eloViewExplainer');
+    const viewRanking   = document.getElementById('eloViewRanking');
+    const btnShow = document.getElementById('eloShowRanking');
+    const btnBack = document.getElementById('eloBackBtn');
+    if(!btnShow || !btnBack) return;
+
+    function switchToRanking() {
+      viewExplainer.classList.add('elo-view--out');
+      setTimeout(() => {
+        viewExplainer.classList.add('elo-view--hidden');
+        viewExplainer.classList.remove('elo-view--out');
+        viewRanking.classList.remove('elo-view--hidden');
+        viewRanking.classList.add('elo-view--in');
+        setTimeout(() => viewRanking.classList.remove('elo-view--in'), 400);
+      }, 280);
+    }
+
+    function switchToExplainer() {
+      viewRanking.classList.add('elo-view--out');
+      setTimeout(() => {
+        viewRanking.classList.add('elo-view--hidden');
+        viewRanking.classList.remove('elo-view--out');
+        viewExplainer.classList.remove('elo-view--hidden');
+        viewExplainer.classList.add('elo-view--in');
+        setTimeout(() => viewExplainer.classList.remove('elo-view--in'), 400);
+      }, 280);
+    }
+
+    btnShow.addEventListener('click', switchToRanking);
+    btnBack.addEventListener('click', switchToExplainer);
+  })();
+
+  /* ELO RANKING TABS */
+  function switchEloTab(btn, name) {
+    document.querySelectorAll('.elo-rtab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.elo-rank-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('eloPanel-' + name).classList.add('active');
+  }
 </script>
 </body>
 </html>
