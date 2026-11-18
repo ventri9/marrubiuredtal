@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tesserati — ASD Red Tal Marrubiu</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="img/red_tal.png" type="image/png">
-<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="redtalogo.svg" type="image/png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="chess-bg">
 
 <nav>
   <a class="nav-logo" href="index.html">
     <div class="logo-emblem">
-      <img src="img/red_tal.png" height="48" width="auto" alt="Logo ASD Red Tal" class="logo-sito">
+      <img src="redtalogo.svg" height="48" width="auto" alt="Logo ASD Red Tal" class="logo-sito">
     </div>
     <div class="logo-text">
       <strong>RED TAL</strong>
@@ -24,7 +24,7 @@
   <ul class="nav-links">
     <li><a href="index.html#notizie">Notizie</a></li>
     <li><a href="tesserati.html">Tesserati</a></li>
-    <li><a href="cis.html">C.I.S.</a></li>
+    <li class="nav-cis-group"><a href="cis.html">C.I.S.</a><a href="https://www.federscacchi.it/cis" target="_blank" rel="noopener" class="nav-cis-ext" title="Sito ufficiale FSI C.I.S." aria-label="Sito esterno FSI C.I.S.">↗</a></li>
     <li><a href="index.html#tornei">Tornei</a></li>
     <li><a href="index.html#elo">ELO</a></li>
     <li><a href="index.html#corsi">Corsi</a></li>
@@ -59,7 +59,7 @@
   <ul class="nav-mobile-links">
     <li><a href="index.html#notizie">Notizie</a></li>
     <li><a href="tesserati.html">Tesserati</a></li>
-    <li><a href="cis.html">C.I.S.</a></li>
+    <li class="nav-mobile-cis-row"><a href="cis.html">C.I.S.</a><a href="https://www.federscacchi.it/cis" target="_blank" rel="noopener" class="nav-mobile-ext">FSI ↗</a></li>
     <li><a href="index.html#tornei">Tornei</a></li>
     <li><a href="index.html#elo">ELO</a></li>
     <li><a href="index.html#corsi">Corsi</a></li>
@@ -92,7 +92,7 @@
       <div class="tc-card fade-up">
         <div class="tc-photo-wrap">
           <div class="tc-placeholder">AA</div>
-            <img src="img/ale.jpeg" alt="Alessandro Altea"> 
+            <img src="ale.jpg" alt="Alessandro Altea"> 
           <div class="tc-overlay">
             <span class="tc-overlay-name">Alessandro Altea</span>
           </div>
@@ -101,7 +101,7 @@
           <div class="tc-head">
             <h3 class="tc-name">Alessandro Altea</h3>
             <div class="tc-meta">
-              <span class="tc-elo-badge tc-elo-cm">ELO 2099</span>
+              <span class="tc-elo-badge tc-elo-cm">ELO 2092</span>
               <span class="tc-cat">Candidato Maestro</span>
             </div>
           </div>
@@ -111,7 +111,7 @@
       <div class="tc-card fade-up">
         <div class="tc-photo-wrap">
           <div class="tc-placeholder">GM</div>
-            <img src="img/gianluca-mameli.png" alt="Gianluca Mameli">
+            <img src="mame.jpg" alt="Gianluca Mameli">
           <div class="tc-overlay">
             <span class="tc-overlay-name">Gianluca Mameli</span>
           </div>
@@ -120,7 +120,7 @@
           <div class="tc-head">
             <h3 class="tc-name">Gianluca Mameli</h3>
             <div class="tc-meta">
-              <span class="tc-elo-badge tc-elo-cm">ELO 2015</span>
+              <span class="tc-elo-badge tc-elo-cm">ELO 2013</span>
               <span class="tc-cat">Candidato Maestro</span>
             </div>
           </div>
@@ -130,7 +130,7 @@
       <div class="tc-card fade-up">
         <div class="tc-photo-wrap">
           <div class="tc-placeholder">LS</div>
-            <img src="img/Luca-Sonis.png" alt="Luca Sonis">
+            <img src="luca.jpg" alt="Luca Sonis">
           <div class="tc-overlay">
             <span class="tc-overlay-name">Luca Sonis</span>
           </div>
@@ -139,7 +139,7 @@
           <div class="tc-head">
             <h3 class="tc-name">Luca Sonis</h3>
             <div class="tc-meta">
-              <span class="tc-elo-badge tc-elo-cm">ELO 2026</span>
+              <span class="tc-elo-badge tc-elo-cm">ELO 2042</span>
               <span class="tc-cat">Candidato Maestro</span>
             </div>
           </div>
@@ -148,7 +148,7 @@
       </div>
       <div class="tc-card fade-up">
         <div class="tc-photo-wrap">
-            <img src="img/Germano-Mascia.png" alt="Germano Mascia">
+            <img src="germa.jpg" alt="Germano Mascia">
           <div class="tc-overlay">
             <span class="tc-overlay-name">Germano Mascia</span>
           </div>
@@ -157,7 +157,7 @@
           <div class="tc-head">
             <h3 class="tc-name">Germano Mascia</h3>
             <div class="tc-meta">
-              <span class="tc-elo-badge tc-elo-cm">ELO 2003</span>
+              <span class="tc-elo-badge tc-elo-cm">ELO 2022</span>
               <span class="tc-cat">Candidato Maestro</span>
             </div>
           </div>
@@ -167,7 +167,7 @@
       <div class="tc-card fade-up">
         <div class="tc-photo-wrap">
           <div class="tc-placeholder">DS</div>
-            <img src="img/daniele-spiga.png" alt="Daniele Spiga">
+            <img src="dani.JPG" alt="Daniele Spiga">
           <div class="tc-overlay">
             <span class="tc-overlay-name">Daniele Spiga</span>
           </div>
@@ -185,27 +185,8 @@
       </div>
       <div class="tc-card fade-up">
         <div class="tc-photo-wrap">
-          <div class="tc-placeholder">LP</div>
-            <img src="img/leopoldo-pannella.png" alt="Leopoldo Pannella">
-          <div class="tc-overlay">
-            <span class="tc-overlay-name">Leopoldo Pannella</span>
-          </div>
-        </div>
-        <div class="tc-body">
-          <div class="tc-head">
-            <h3 class="tc-name">Leopoldo Pannella</h3>
-            <div class="tc-meta">
-              <span class="tc-elo-badge tc-elo-cm">ELO 1952</span>
-              <span class="tc-cat">Candidato Maestro</span>
-            </div>
-          </div>
-          <p class="tc-bio">Leopoldo è l'istruttore storico del Red Tal e figura di riferimento per l'attività didattica del circolo. Con metodo e passione ha sempre seguito i più piccoli, trasmettendo i fondamentali del gioco con la capacità di rendere ogni lezione coinvolgente. E' grazie al suo lavoro se ora i nostri giovani giocatori hanno ottenuto risultati eccellenti nelle competizioni regionali e nazionali.</p>
-        </div>
-      </div>
-      <div class="tc-card fade-up">
-        <div class="tc-photo-wrap">
           <div class="tc-placeholder">MC</div>
-            <img src="img/mattia-corrias.png" alt="Mattia Corrias"> 
+            <img src="matti.PNG" alt="Mattia Corrias"> 
           <div class="tc-overlay">
             <span class="tc-overlay-name">Mattia Corrias</span>
           </div>
@@ -239,7 +220,7 @@
       <div class="tc-card fade-up">
         <div class="tc-photo-wrap">
           <div class="tc-placeholder">LV</div>
-            <img src="img/Lorenzo-Ventrice.jpeg" alt="Lorenzo Ventrice"> 
+            <img src="ventri.JPG" alt="Lorenzo Ventrice"> 
           <div class="tc-overlay">
             <span class="tc-overlay-name">Lorenzo Ventrice</span>
           </div>
@@ -248,7 +229,7 @@
           <div class="tc-head">
             <h3 class="tc-name">Lorenzo Ventrice</h3>
             <div class="tc-meta">
-              <span class="tc-elo-badge tc-elo-prima">ELO 1950</span>
+              <span class="tc-elo-badge tc-elo-prima">ELO 1919</span>
               <span class="tc-cat">1ª Nazionale · U18</span>
             </div>
           </div>
@@ -258,7 +239,7 @@
       <div class="tc-card fade-up">
         <div class="tc-photo-wrap">
           <div class="tc-placeholder">EC</div>
-            <img src="img/Emanuele-Cancedda.png" alt="Emanuele Cancedda"> 
+            <img src="manu.jpg" alt="Emanuele Cancedda"> 
           <div class="tc-overlay">
             <span class="tc-overlay-name">Emanuele Cancedda</span>
           </div>
@@ -267,17 +248,17 @@
           <div class="tc-head">
             <h3 class="tc-name">Emanuele Cancedda</h3>
             <div class="tc-meta">
-              <span class="tc-elo-badge tc-elo-prima">ELO 1893</span>
+              <span class="tc-elo-badge tc-elo-prima">ELO 1702</span>
               <span class="tc-cat">1ª Nazionale · U16</span>
             </div>
           </div>
-          <p class="tc-bio">Emanuele è un giovane scacchista con un potenziale enorme. Ha dimostrato una continuità di rendimento eccezionale per la sua età. Il suo gioco combina solidità difensiva e capacità di creare complicazioni tattiche, caratteristiche che lo rendono avversario temibile in qualsiasi torneo. Con quasi 1900 punti ELO è già nel radar dei migliori giovani scacchisti sardi e italiani, e il Red Tal ripone in lui grandi aspettative.</p>
+          <p class="tc-bio">Emanuele è un giovane scacchista con un potenziale enorme. Ha dimostrato una continuità di rendimento eccezionale per la sua età. Il suo gioco combina solidità difensiva e capacità di creare complicazioni tattiche, caratteristiche che lo rendono avversario temibile in qualsiasi torneo. Ormai è già nel radar dei migliori giovani scacchisti sardi e italiani, e il Red Tal ripone in lui grandi aspettative.</p>
         </div>
       </div>
       <div class="tc-card fade-up">
         <div class="tc-photo-wrap">
           <div class="tc-placeholder">VG</div>
-            <img src="img/vicky.png" alt="Victoria Garau"> 
+            <img src="viky.jpg" alt="Victoria Garau"> 
           <div class="tc-overlay">
             <span class="tc-overlay-name">Victoria Garau</span>
           </div>
@@ -286,7 +267,7 @@
           <div class="tc-head">
             <h3 class="tc-name">Victoria Garau</h3>
             <div class="tc-meta">
-              <span class="tc-elo-badge tc-elo-terza">ELO 1497</span>
+              <span class="tc-elo-badge tc-elo-terza">ELO 1427</span>
               <span class="tc-cat">3ª Nazionale · U10</span>
             </div>
           </div>
@@ -301,7 +282,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a class="nav-logo" href="index.html" style="display:inline-flex;margin-bottom:1rem;">
-        <div class="logo-emblem"><img src="red_tal.png" height="45" alt="Logo" class="logo-sito"></div>
+        <div class="logo-emblem"><img src="redtalogo.svg" height="45" alt="Logo" class="logo-sito"></div>
         <div class="logo-text"><strong>RED TAL</strong><span>Marrubiu · dal 2009</span></div>
       </a>
       <p>ASD Circolo Scacchistico Red Tal — promuovere gli scacchi in Sardegna, crescere campioni e costruire comunità.</p>

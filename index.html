@@ -5,16 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASD Red Tal Marrubiu — Circolo Scacchistico</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="img/red_tal.png" type="image/png">
-<link rel="stylesheet" href="css/style.css">
-<base target="_blank">
+<link rel="icon" href="redtalogo.svg" type="image/png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="chess-bg">
 
 <nav>
   <a class="nav-logo" href="#">
     <div class="logo-emblem">
-      <img src="img/red_tal.png" height="48" width="auto" alt="Logo ASD Red Tal" class="logo-sito">
+      <img src="redtalogo.svg" height="48" width="auto" alt="Logo ASD Red Tal" class="logo-sito">
     </div>
     <div class="logo-text">
       <strong>RED TAL</strong>
@@ -25,10 +24,7 @@
   <ul class="nav-links">
     <li><a href="#notizie">Notizie</a></li>
     <li><a href="tesserati.html">Tesserati</a></li>
-    <li class="nav-cis-group">
-      <a href="cis.html">C.I.S.</a>
-      <a href="https://www.federscacchi.it/cis" target="_blank" class="nav-cis-ext" title="Sito ufficiale FSI C.I.S." aria-label="FSI C.I.S. — sito esterno">↗</a>
-    </li>
+    <li class="nav-cis-group"><a href="cis.html">C.I.S.</a><a href="https://www.federscacchi.it/cis" target="_blank" rel="noopener" class="nav-cis-ext" title="Sito ufficiale FSI C.I.S." aria-label="Sito esterno FSI C.I.S.">↗</a></li>
     <li><a href="#tornei">Tornei</a></li>
     <li><a href="#palmares">Palmarès</a></li>
     <li><a href="#elo">ELO</a></li>
@@ -64,10 +60,7 @@
   <ul class="nav-mobile-links">
     <li><a href="#notizie">Notizie</a></li>
     <li><a href="tesserati.html">Tesserati</a></li>
-    <li class="nav-mobile-cis-row">
-      <a href="cis.html">C.I.S.</a>
-      <a href="https://www.federscacchi.it/cis" target="_blank" class="nav-mobile-ext">FSI ↗</a>
-    </li>
+    <li class="nav-mobile-cis-row"><a href="cis.html">C.I.S.</a><a href="https://www.federscacchi.it/cis" target="_blank" rel="noopener" class="nav-mobile-ext">FSI ↗</a></li>
     <li><a href="#tornei">Tornei</a></li>
     <li><a href="#palmares">Palmarès</a></li>
     <li><a href="#elo">ELO</a></li>
@@ -78,7 +71,7 @@
 </div>
 
 <header class="hero">
-  <img src="img/red_tal.png" alt="" class="hero-logo-watermark" aria-hidden="true">
+  <img src="redtalogo.svg" alt="" class="hero-logo-watermark" aria-hidden="true">
   <div class="hero-board" aria-hidden="true">
     <div class="hero-board-inner" id="heroBoardInner"></div>
   </div>
@@ -106,7 +99,7 @@
       <h2 class="section-title">Notizie & Aggiornamenti</h2>
       <div class="divider"></div>
     </div>
-    <a href="#" class="see-all">Tutte le notizie →</a>
+    <a href="https://www.instagram.com/red_tal_marrubiu/"  target="_blank" class="see-all">Tutte le notizie →</a>
   </div>
   <div class="news-grid fade-up">
     <div class="news-card featured news-card--with-gallery">
@@ -299,21 +292,20 @@
     </div>
     <a href="#" class="see-all">Archivio completo →</a>
   </div>
-  <div class="tornei-list fade-up">
-    <!-- Banner CIS -->
-    <div class="cis-banner fade-up">
-      <div class="cis-banner-left">
-        <span class="cis-serie-badge cis-serie-a2">Serie A2</span>
-        <div>
-          <div class="cis-banner-title">Campionato Italiano a Squadre</div>
-          <div class="cis-banner-sub">Il Red Tal partecipa con 3 squadre nelle serie nazionali e regionali</div>
-        </div>
-      </div>
-      <div class="cis-banner-right">
-        <a href="cis.html" class="cis-banner-btn-int">Le nostre squadre →</a>
-        <a href="https://www.federscacchi.it/cis" target="_blank" class="cis-banner-btn-ext">FSI C.I.S. ↗</a>
+  <div class="cis-banner fade-up">
+    <div class="cis-banner-left">
+      <span class="cis-serie-badge cis-serie-a2">Serie A2</span>
+      <div>
+        <div class="cis-banner-title">Campionato Italiano a Squadre</div>
+        <div class="cis-banner-sub">Il Red Tal partecipa con 3 squadre nelle serie nazionali e regionali</div>
       </div>
     </div>
+    <div class="cis-banner-right">
+      <a href="cis.html" class="cis-banner-btn-int">Le nostre squadre →</a>
+      <a href="https://www.federscacchi.it/cis" target="_blank" rel="noopener" class="cis-banner-btn-ext">FSI C.I.S. ↗</a>
+    </div>
+  </div>
+  <div class="tornei-list fade-up">
     <div class="torneo-row">
       <div class="torneo-name"><h4>CIG 2025 — Campionato Regionale Sardegna U18</h4><p>Marrubiu · 13 Aprile 2025 · ELO Rapid FIDE</p></div>
       <div class="torneo-meta"><div class="val">32</div><div class="key">Partecipanti</div></div>
@@ -399,7 +391,7 @@
             <p>Roma. Il Red Tal conquista la promozione nella massima serie del Campionato Italiano a Squadre, traguardo storico per un circolo della Sardegna.</p>
             <div class="palmares-links">
               <a href="cis.html" class="palmares-link-int">Le nostre squadre →</a>
-              <a href="https://www.federscacchi.it/cis" target="_blank" class="palmares-link-ext">C.I.S. su FSI ↗</a>
+              <a href="https://www.federscacchi.it/cis" target="_blank" rel="noopener" class="palmares-link-ext">C.I.S. su FSI ↗</a>
             </div>
           </div>
         </div>
@@ -476,7 +468,7 @@
     <div class="elo-view elo-view--hidden" id="eloViewRanking">
       <div class="elo-ranking-header fade-up">
         <button class="elo-back-btn" id="eloBackBtn">← Torna alla spiegazione ELO</button>
-        <p class="elo-ranking-note">Classifica aggiornata al giugno 2026 · Solo tesserati FIDE attivi</p>
+        <p class="elo-ranking-note">Classifica aggiornata a novembre 2026 · Solo tesserati FIDE attivi</p>
       </div>
 
       <div class="elo-ranking-tabs fade-up">
@@ -493,7 +485,7 @@
               <th>Giocatore</th>
               <th>Titolo</th>
               <th>ELO FIDE</th>
-              <th>Partite</th>
+              <th>Elo Max (anno)</th>
             </tr>
           </thead>
           <tbody>
@@ -501,43 +493,43 @@
               <td class="elo-pos"><span class="pos-badge gold">1</span></td>
               <td class="elo-name"><div class="elo-avatar">AA</div>Alessandro Altea</td>
               <td><span class="elo-title-badge cm">CM</span></td>
-              <td class="elo-score">2099</td>
-              <td class="elo-games">34</td>
+              <td class="elo-score">2092</td>
+              <td class="elo-games">2123 (2025)</td>
             </tr>
             <tr class="elo-row rank-2">
               <td class="elo-pos"><span class="pos-badge silver">2</span></td>
               <td class="elo-name"><div class="elo-avatar">GM</div>Gianluca Mameli</td>
               <td><span class="elo-title-badge cm">CM</span></td>
-              <td class="elo-score">2015</td>
-              <td class="elo-games">28</td>
+              <td class="elo-score">2013</td>
+              <td class="elo-games">2136 (2019)</td>
             </tr>
             <tr class="elo-row rank-3">
               <td class="elo-pos"><span class="pos-badge bronze">3</span></td>
-              <td class="elo-name"><div class="elo-avatar">MC</div>Mattia Corrias</td>
-              <td><span class="elo-title-badge prima">1ª</span></td>
-              <td class="elo-score">1892</td>
-              <td class="elo-games">21</td>
+              <td class="elo-name"><div class="elo-avatar">LS</div>Luca Sonis</td>
+              <td><span class="elo-title-badge prima">CM</span></td>
+              <td class="elo-score">2042</td>
+              <td class="elo-games">2042 (2026)</td>
             </tr>
             <tr class="elo-row">
               <td class="elo-pos"><span class="pos-badge">4</span></td>
-              <td class="elo-name"><div class="elo-avatar">DS</div>Daniele Spiga</td>
-              <td><span class="elo-title-badge seconda">2ª</span></td>
-              <td class="elo-score">1744</td>
-              <td class="elo-games">18</td>
+              <td class="elo-name"><div class="elo-avatar">GM</div>Germano Mascia</td>
+              <td><span class="elo-title-badge seconda">CM</span></td>
+              <td class="elo-score">2022</td>
+              <td class="elo-games">2040 (2025)</td>
             </tr>
             <tr class="elo-row">
               <td class="elo-pos"><span class="pos-badge">5</span></td>
-              <td class="elo-name"><div class="elo-avatar">AP</div>Antonello Pannella</td>
+              <td class="elo-name"><div class="elo-avatar">MC</div>Mattia Corrias</td>
               <td><span class="elo-title-badge seconda">2ª</span></td>
-              <td class="elo-score">1680</td>
-              <td class="elo-games">14</td>
+              <td class="elo-score">1753</td>
+              <td class="elo-games">1761 (2024)</td>
             </tr>
             <tr class="elo-row">
               <td class="elo-pos"><span class="pos-badge">6</span></td>
-              <td class="elo-name"><div class="elo-avatar">LP</div>Leopoldo Pannella</td>
-              <td><span class="elo-title-badge terza">3ª</span></td>
-              <td class="elo-score">1571</td>
-              <td class="elo-games">11</td>
+              <td class="elo-name"><div class="elo-avatar">DS</div>Daniele Spiga</td>
+              <td><span class="elo-title-badge terza">2ª</span></td>
+              <td class="elo-score">1747</td>
+              <td class="elo-games">1747 (2026)</td>
             </tr>
           </tbody>
         </table>
@@ -552,37 +544,37 @@
               <th>Giocatore</th>
               <th>Cat.</th>
               <th>ELO FIDE</th>
-              <th>Partite</th>
+              <th>Elo Max (anno)</th>
             </tr>
           </thead>
           <tbody>
             <tr class="elo-row rank-1">
               <td class="elo-pos"><span class="pos-badge gold">1</span></td>
-              <td class="elo-name"><div class="elo-avatar">VG</div>Victoria Garau</td>
-              <td><span class="elo-title-badge cm">U10F</span></td>
-              <td class="elo-score">1340</td>
-              <td class="elo-games">42</td>
+              <td class="elo-name"><div class="elo-avatar">LV</div>Lorenzo Ventrice</td>
+              <td><span class="elo-title-badge cm">1ª</span></td>
+              <td class="elo-score">1919</td>
+              <td class="elo-games">1999 (03/2026)</td>
             </tr>
             <tr class="elo-row rank-2">
               <td class="elo-pos"><span class="pos-badge silver">2</span></td>
-              <td class="elo-name"><div class="elo-avatar">MS</div>Marco Scanu</td>
-              <td><span class="elo-title-badge prima">U14</span></td>
-              <td class="elo-score">1210</td>
-              <td class="elo-games">19</td>
+              <td class="elo-name"><div class="elo-avatar">EC</div>Emanuele Cancedda</td>
+              <td><span class="elo-title-badge prima">1ª</span></td>
+              <td class="elo-score">1702</td>
+              <td class="elo-games">1893 (06/2026)</td>
             </tr>
             <tr class="elo-row rank-3">
               <td class="elo-pos"><span class="pos-badge bronze">3</span></td>
-              <td class="elo-name"><div class="elo-avatar">AL</div>Andrea Loi</td>
-              <td><span class="elo-title-badge seconda">U16</span></td>
-              <td class="elo-score">1155</td>
-              <td class="elo-games">15</td>
+              <td class="elo-name"><div class="elo-avatar">LZ</div>Lorenzo Zanda</td>
+              <td><span class="elo-title-badge seconda">2ª</span></td>
+              <td class="elo-score">1654</td>
+              <td class="elo-games">1709 (08/2026)</td>
             </tr>
             <tr class="elo-row">
               <td class="elo-pos"><span class="pos-badge">4</span></td>
-              <td class="elo-name"><div class="elo-avatar">FP</div>Fabio Piras</td>
-              <td><span class="elo-title-badge terza">U18</span></td>
-              <td class="elo-score">1088</td>
-              <td class="elo-games">12</td>
+              <td class="elo-name"><div class="elo-avatar">VG</div>Victoria Garau</td>
+              <td><span class="elo-title-badge terza">3ª</span></td>
+              <td class="elo-score">1427</td>
+              <td class="elo-games">1497 (04/2026)</td>
             </tr>
           </tbody>
         </table>
@@ -675,7 +667,7 @@
 
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
-            <img src="img/daniele-spiga.png" alt="Daniele Spiga"> 
+            <img src="dani.JPG" alt="Daniele Spiga"> 
           </div>
         <div class="direttivo-info">
           <h4>Daniele Spiga</h4>
@@ -685,7 +677,7 @@
 
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
-          <img src="img/antonello.jpeg" alt="Antonello Pannella"> 
+          <img src="antonello.JPG" alt="Antonello Pannella"> 
         </div>
         <div class="direttivo-info">
           <h4>Antonello Pannella</h4>
@@ -695,7 +687,7 @@
 
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
-          <img src="img/mattia-corrias.png" alt="Mattia Corrias">
+          <img src="matti.PNG" alt="Mattia Corrias">
         </div>
         <div class="direttivo-info">
           <h4>Mattia Corrias</h4>
@@ -705,7 +697,7 @@
 
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
-          <img src="img/gianluca-mameli.png" alt="Gianluca Mameli">
+          <img src="mame.jpg" alt="Gianluca Mameli">
         </div>
         <div class="direttivo-info">
           <h4>Gianluca Mameli</h4>
@@ -722,22 +714,51 @@
 
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
-          <div class="direttivo-photo-placeholder">LP</div>
-            <img src="img/leopoldo-pannella.png" alt="Leopoldo Pannella"> 
+          <div class="direttivo-photo-placeholder"></div>
+            <img src="dani.JPG" alt="Daniele Spiga"> 
           </div>
         <div class="direttivo-info">
-          <h4>Leopoldo Pannella</h4>
+          <h4>Daniele Spiga</h4>
           <span class="direttivo-ruolo istruttore">Istruttore</span>
         </div>
       </div>
 
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
-          <img src="img/ale.jpeg" alt="Alessandro Altea">
+          <img src="ale.jpg" alt="Alessandro Altea">
         </div>
         <div class="direttivo-info">
           <h4>Alessandro Altea</h4>
           <span class="direttivo-ruolo istruttore">Istruttore</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="direttivo-gruppo fade-up">
+    <h3 class="direttivo-gruppo-title">Staff & Collaboratori</h3>
+    <div class="direttivo-grid direttivo-grid--small">
+
+      <div class="direttivo-card">
+        <div class="direttivo-photo-wrap">
+          <div class="direttivo-photo-placeholder"></div>
+            <img src="rocchi.jpg" alt="Francesco Rocchiccioli">
+        </div>
+        <div class="direttivo-info">
+          <h4>Francesco Rocchiccioli</h4>
+          <span class="direttivo-ruolo">Responsabile Safeguarding</span>
+        </div>
+      </div>
+
+      <div class="direttivo-card">
+        <div class="direttivo-photo-wrap">
+          <div class="direttivo-photo-placeholder"></div>
+            <img src="ventri2.jpg" alt="Lorenzo Ventrice"> 
+        </div>
+        <div class="direttivo-info">
+          <h4>Lorenzo Ventrice</h4>
+          <span class="direttivo-ruolo">Graphic Designer</span>
         </div>
       </div>
 
@@ -761,7 +782,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a class="nav-logo" href="#" style="display:inline-flex;margin-bottom:1rem;">
-        <div class="logo-emblem"><img src="img/red_tal.png" height="45" alt="Logo" class="logo-sito"></div>
+        <div class="logo-emblem"><img src="redtalogo.svg" height="45" alt="Logo" class="logo-sito"></div>
         <div class="logo-text"><strong>RED TAL</strong><span>Marrubiu · dal 2009</span></div>
       </a>
       <p>ASD Circolo Scacchistico Red Tal — promuovere gli scacchi in Sardegna, crescere campioni e costruire comunità.</p>
