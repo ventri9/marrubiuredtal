@@ -4422,7 +4422,7 @@ footer {
   }
 
   .galleria-side {
-    order: -1; /* Porta la scelta torneo sopra il rullino su tablet/mobile */
+    margin-top: 0.5rem;
   }
 }
 
