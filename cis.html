@@ -414,7 +414,7 @@
   const saved = localStorage.getItem('redtal-theme') || 'light';
   html.setAttribute('data-theme', saved);
   function toggleTheme() {
-    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     html.setAttribute('data-theme', next);
     localStorage.setItem('redtal-theme', next);
   }
