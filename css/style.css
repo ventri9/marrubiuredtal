@@ -4420,10 +4420,8 @@ footer {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-
-  .galleria-side {
-    margin-top: 0.5rem;
-  }
+  .galleria-stage { order: 1; }
+  .galleria-side  { order: 2; margin-top: 0.5rem; }
 }
 
 @media (max-width: 768px) {
