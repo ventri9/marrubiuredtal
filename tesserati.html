@@ -326,7 +326,7 @@
 
 <script>
   const html = document.documentElement;
-  const saved = localStorage.getItem('redtal-theme') || 'dark';
+  const saved = localStorage.getItem('redtal-theme') || 'light';
   html.setAttribute('data-theme', saved);
   document.getElementById('themeToggle').addEventListener('click', () => {
     const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
