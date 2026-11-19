@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="it" data-theme="light">
+<html lang="it" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ASD Red Tal Marrubiu — Circolo Scacchistico</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="img/redtalogo.svg" type="image/png">
-<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="redtalogo.svg" type="image/png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="chess-bg">
 
 <nav>
   <a class="nav-logo" href="#">
     <div class="logo-emblem">
-      <img src="img/redtalogo.svg" height="48" width="auto" alt="Logo ASD Red Tal" class="logo-sito">
+      <img src="redtalogo.svg" height="48" width="auto" alt="Logo ASD Red Tal" class="logo-sito">
     </div>
     <div class="logo-text">
       <strong>RED TAL</strong>
@@ -71,6 +71,99 @@
 </div>
 
 <header class="hero">
+  <img src="redtalogo.svg" alt="" class="hero-logo-watermark" aria-hidden="true">
+  <div class="hero-board" aria-hidden="true">
+    <div class="hero-board-inner" id="heroBoardInner"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">Circolo Scacchistico — Marrubiu, Sardegna</div>
+    <h1>Dove la<br><em>strategia</em><br>batte l'arte.</h1>
+    <p>ASD Red Tal è uno dei cuori pulsanti degli scacchi in Sardegna. Composto da campioni, talenti e una comunità appassionata attorno alla più nobile delle discipline.</p>
+    <div class="hero-actions">
+      <a href="#iscriviti" class="btn-primary">Iscriviti ora</a>
+      <a href="#tesserati" class="btn-outline">Scopri i tesserati</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="num">45+</div><div class="lbl">Tesserati</div></div>
+      <div class="stat-item"><div class="num">A1</div><div class="lbl">C.I.S</div></div>
+      <div class="stat-item"><div class="num">2009</div><div class="lbl">Anno di fondazione</div></div>
+    </div>
+  </div>
+</header>
+
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASD Red Tal Marrubiu — Circolo Scacchistico</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="img/redtalogo.svg" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="chess-bg">
+
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="logo-emblem">
+      <img src="img/redtalogo.svg" height="48" width="auto" alt="Logo ASD Red Tal" class="logo-sito">
+    </div>
+    <div class="logo-text">
+      <strong>RED TAL</strong>
+      <span>Marrubiu — dal 2009</span>
+    </div>
+  </a>
+  <!-- Nav desktop -->
+  <ul class="nav-links">
+    <li><a href="#galleria">Galleria</a></li>
+    <li><a href="tesserati.html">Tesserati</a></li>
+    <li class="nav-cis-group"><a href="cis.html">C.I.S.</a><a href="https://www.federscacchi.it/cis" target="_blank" rel="noopener" class="nav-cis-ext" title="Sito ufficiale FSI C.I.S." aria-label="Sito esterno FSI C.I.S.">↗</a></li>
+    <li><a href="#tornei">Tornei</a></li>
+    <li><a href="#palmares">Palmarès</a></li>
+    <li><a href="#elo">ELO</a></li>
+    <li><a href="#corsi">Corsi</a></li>
+    <li><a href="#chisiamo">Chi Siamo</a></li>
+    <li>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambia tema">
+        <span class="toggle-icon-light">☀️</span>
+        <span class="toggle-icon-dark">🌙</span>
+        <div class="toggle-thumb"></div>
+      </button>
+    </li>
+    <li><a href="#iscriviti" class="nav-cta">Iscriviti</a></li>
+  </ul>
+  <!-- Hamburger (solo mobile) -->
+  <button class="nav-hamburger" id="navHamburger" aria-label="Apri menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Menu mobile overlay -->
+<div class="nav-mobile-overlay" id="navMobileOverlay" aria-hidden="true">
+  <div class="nav-mobile-theme">
+    <span>Tema</span>
+    <button class="theme-toggle" id="themeToggleMobile" aria-label="Cambia tema">
+      <span class="toggle-icon-light">☀️</span>
+      <span class="toggle-icon-dark">🌙</span>
+      <div class="toggle-thumb"></div>
+    </button>
+  </div>
+  <ul class="nav-mobile-links">
+    <li><a href="#galleria">Galleria</a></li>
+    <li><a href="tesserati.html">Tesserati</a></li>
+    <li class="nav-mobile-cis-row"><a href="cis.html">C.I.S.</a><a href="https://www.federscacchi.it/cis" target="_blank" rel="noopener" class="nav-mobile-ext">FSI ↗</a></li>
+    <li><a href="#tornei">Tornei</a></li>
+    <li><a href="#palmares">Palmarès</a></li>
+    <li><a href="#elo">ELO</a></li>
+    <li><a href="#corsi">Corsi</a></li>
+    <li><a href="#chisiamo">Chi Siamo</a></li>
+  </ul>
+  <a href="#iscriviti" class="nav-mobile-cta">Iscriviti ora</a>
+</div>
+
+<header class="hero">
   <img src="img/redtalogo.svg" alt="" class="hero-logo-watermark" aria-hidden="true">
   <div class="hero-board" aria-hidden="true">
     <div class="hero-board-inner" id="heroBoardInner"></div>
@@ -91,93 +184,456 @@
   </div>
 </header>
 
-<!-- NOTIZIE -->
-<section class="news-section" id="notizie">
+<!-- GALLERIA -->
+<section class="galleria-section" id="galleria">
   <div class="section-header fade-up">
     <div>
-      <p class="section-tag">Ultime notizie</p>
-      <h2 class="section-title">Notizie & Aggiornamenti</h2>
+      <p class="section-tag">Il rullino del circolo</p>
+      <h2 class="section-title">Galleria dei Tornei</h2>
       <div class="divider"></div>
     </div>
-    <a href="https://www.instagram.com/red_tal_marrubiu/"  target="_blank" class="see-all">Tutte le notizie →</a>
+    <a href="https://www.instagram.com/red_tal_marrubiu/" target="_blank" rel="noopener" class="see-all">Altre foto su Instagram →</a>
   </div>
-  <div class="news-grid fade-up">
-    <div class="news-card featured news-card--with-gallery">
-      <span class="news-tag">Scacchi sotto le stelle</span>
-      <h3>Blitz notturno — Marrubiu</h3>
-      <p>Vi aspettiamo a Marrubiu il 20 agosto per il torneo Blitz notturno più classico degli ultimi anni.</p>
-      <div class="date">20 Agosto 2026</div>
 
-      <!-- Mini carosello foto -->
-      <div class="nc-mini">
-        <div class="nc-mini-track-wrap">
-          <div class="nc-mini-track" id="ncMiniTrack">
+  <div class="galleria fade-up">
 
-            <div class="nc-mini-slide">
-              <img src="" alt="Campionato Interprovinciale">
-              <div class="nc-mini-placeholder">&#9820;</div>
-              <div class="nc-mini-overlay">
-                <span class="nc-mini-place">Cagliari, CA</span>
-                <span class="nc-mini-title">Campionato Interprovinciale — I nostri giovani</span>
-              </div>
-            </div>
+    <!-- Rullino del torneo selezionato -->
+    <div class="galleria-stage">
 
-            <div class="nc-mini-slide">
-              <img src="" alt="Victoria Garau">
-              <div class="nc-mini-placeholder">&#9823;</div>
-              <div class="nc-mini-overlay">
-                <span class="nc-mini-place">Salsomaggiore Terme, PR</span>
-                <span class="nc-mini-title">Victoria Garau — Campionessa Italiana U8F 2024</span>
-              </div>
-            </div>
-
-            <div class="nc-mini-slide">
-              <img src="" alt="Cis 2025">
-              <div class="nc-mini-placeholder">&#9819;</div>
-              <div class="nc-mini-overlay">
-                <span class="nc-mini-place">Roma, RM</span>
-                <span class="nc-mini-title">Promozione in A1</span>
-              </div>
-            </div>
-
-          </div>
+      <!-- Per aggiungere una foto: copia un blocco "gal-slide" dentro "gal-track" -->
+      <div class="gal-album is-active" id="album-isili" role="tabpanel">
+        <div class="gal-album-head">
+          <h3>Chess ta cosa bella</h3>
+          <p>Isili (SU) · 31 luglio – 2 agosto</p>
         </div>
-        <button class="nc-mini-btn nc-mini-prev" id="ncMiniPrev" aria-label="Precedente">&#8592;</button>
-        <button class="nc-mini-btn nc-mini-next" id="ncMiniNext" aria-label="Successiva">&#8594;</button>
-        <div class="nc-mini-dots" id="ncMiniDots"></div>
+        <div class="gal-viewer" tabindex="0">
+          <div class="gal-track-wrap">
+            <div class="gal-track">
+              <div class="gal-slide">
+                <div class="gal-blur"></div>
+                <img src="img/ventri2.jpg" alt="Lorenzo Ventrice sul podio">
+                <div class="gal-placeholder">♞</div>
+                <div class="gal-caption">
+                  <span class="gal-caption-place">Isili, SU</span>
+                  <span class="gal-caption-title">Lorenzo Ventrice sul podio</span>
+                </div>
+              </div>
+              <div class="gal-slide">
+                <div class="gal-blur"></div>
+                <img src="img/germa.jpg" alt="Germano Mascia alla premiazione">
+                <div class="gal-placeholder">♞</div>
+                <div class="gal-caption">
+                  <span class="gal-caption-place">Isili, SU</span>
+                  <span class="gal-caption-title">Germano Mascia alla premiazione</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="gal-btn gal-prev" aria-label="Foto precedente">&#8592;</button>
+          <button class="gal-btn gal-next" aria-label="Foto successiva">&#8594;</button>
+          <div class="gal-counter"></div>
+        </div>
+        <div class="gal-dots"></div>
+      </div>
+
+      <div class="gal-album" id="album-coppa" role="tabpanel">
+        <div class="gal-album-head">
+          <h3>Coppa Città di Marrubiu</h3>
+          <p>Marrubiu (OR) · XV e XVI edizione</p>
+        </div>
+        <div class="gal-viewer" tabindex="0">
+          <div class="gal-track-wrap">
+            <div class="gal-track">
+              <div class="gal-slide">
+                <div class="gal-blur"></div>
+                <img src="img/mame.jpg" alt="Gianluca Mameli al tavolo">
+                <div class="gal-placeholder">♞</div>
+                <div class="gal-caption">
+                  <span class="gal-caption-place">Marrubiu, OR</span>
+                  <span class="gal-caption-title">Gianluca Mameli al tavolo</span>
+                </div>
+              </div>
+              <div class="gal-slide">
+                <div class="gal-blur"></div>
+                <img src="img/ale.jpg" alt="Alessandro Altea in gara">
+                <div class="gal-placeholder">♞</div>
+                <div class="gal-caption">
+                  <span class="gal-caption-place">Marrubiu, OR</span>
+                  <span class="gal-caption-title">Alessandro Altea in gara</span>
+                </div>
+              </div>
+              <div class="gal-slide">
+                <div class="gal-blur"></div>
+                <img src="img/viky.jpg" alt="Victoria Garau in gara">
+                <div class="gal-placeholder">♞</div>
+                <div class="gal-caption">
+                  <span class="gal-caption-place">Marrubiu, OR</span>
+                  <span class="gal-caption-title">Victoria Garau in gara</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="gal-btn gal-prev" aria-label="Foto precedente">&#8592;</button>
+          <button class="gal-btn gal-next" aria-label="Foto successiva">&#8594;</button>
+          <div class="gal-counter"></div>
+        </div>
+        <div class="gal-dots"></div>
+      </div>
+
+      <div class="gal-album" id="album-cig" role="tabpanel">
+        <div class="gal-album-head">
+          <h3>Campionati Italiani Giovanili</h3>
+          <p>Salsomaggiore Terme (PR)</p>
+        </div>
+        <div class="gal-viewer" tabindex="0">
+          <div class="gal-track-wrap">
+            <div class="gal-track">
+              <div class="gal-slide">
+                <div class="gal-blur"></div>
+                <img src="img/ventri.JPG" alt="Lorenzo Ventrice ai Campionati Italiani Giovanili">
+                <div class="gal-placeholder">♞</div>
+                <div class="gal-caption">
+                  <span class="gal-caption-place">Salsomaggiore Terme, PR</span>
+                  <span class="gal-caption-title">Lorenzo Ventrice in gara</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="gal-btn gal-prev" aria-label="Foto precedente">&#8592;</button>
+          <button class="gal-btn gal-next" aria-label="Foto successiva">&#8594;</button>
+          <div class="gal-counter"></div>
+        </div>
+        <div class="gal-dots"></div>
+      </div>
+
+      <div class="gal-album" id="album-cis" role="tabpanel">
+        <div class="gal-album-head">
+          <h3>C.I.S. — Promozione in A1</h3>
+          <p>Roma · 2025</p>
+        </div>
+        <div class="gal-viewer" tabindex="0">
+          <div class="gal-track-wrap">
+            <div class="gal-track">
+              <div class="gal-slide">
+                <div class="gal-placeholder">♜<small>Foto in arrivo</small></div>
+              </div>
+            </div>
+          </div>
+          <button class="gal-btn gal-prev" aria-label="Foto precedente">&#8592;</button>
+          <button class="gal-btn gal-next" aria-label="Foto successiva">&#8594;</button>
+          <div class="gal-counter"></div>
+        </div>
+        <div class="gal-dots"></div>
+      </div>
+
+      <div class="gal-album" id="album-interprovinciale" role="tabpanel">
+        <div class="gal-album-head">
+          <h3>Campionato Interprovinciale</h3>
+          <p>Cagliari · 2026</p>
+        </div>
+        <div class="gal-viewer" tabindex="0">
+          <div class="gal-track-wrap">
+            <div class="gal-track">
+              <div class="gal-slide">
+                <div class="gal-placeholder">♛<small>Foto in arrivo</small></div>
+              </div>
+            </div>
+          </div>
+          <button class="gal-btn gal-prev" aria-label="Foto precedente">&#8592;</button>
+          <button class="gal-btn gal-next" aria-label="Foto successiva">&#8594;</button>
+          <div class="gal-counter"></div>
+        </div>
+        <div class="gal-dots"></div>
       </div>
 
     </div>
-    <div class="news-col">
-      <a class="news-card" href="#">
-        <span class="news-tag">Risultati</span>
-        <h3>Victoria Garau vince il campionato interprovinciale</h3>
-        <p>Straordinaria performance della nostra campionessa.</p>
-        <div class="date">11 Aprile 2026</div>
-      </a>
-      <a class="news-card" href="#">
-        <span class="news-tag">Corsi</span>
-        <h3>Nuovi corsi primaverili aperti alle iscrizioni</h3>
-        <p>Tre livelli disponibili: Base e Avanzato.</p>
-        <div class="date">Quando vuoi, ti aspettiamo!</div>
-      </a>
+
+    <!-- Elenco dei tornei -->
+    <aside class="galleria-side">
+      <p class="gal-list-title">Scegli il torneo</p>
+      <ul class="galleria-list" role="tablist" aria-label="Tornei">
+        <li>
+          <button class="gal-item is-active" role="tab" aria-selected="true" data-target="album-isili">
+            <span class="gal-item-name">Chess ta cosa bella</span>
+            <span class="gal-item-count"></span>
+            <span class="gal-item-meta">Isili (SU) · 31 luglio – 2 agosto</span>
+          </button>
+        </li>
+        <li>
+          <button class="gal-item" role="tab" aria-selected="false" data-target="album-coppa">
+            <span class="gal-item-name">Coppa Città di Marrubiu</span>
+            <span class="gal-item-count"></span>
+            <span class="gal-item-meta">Marrubiu (OR) · XV e XVI edizione</span>
+          </button>
+        </li>
+        <li>
+          <button class="gal-item" role="tab" aria-selected="false" data-target="album-cig">
+            <span class="gal-item-name">Campionati Italiani Giovanili</span>
+            <span class="gal-item-count"></span>
+            <span class="gal-item-meta">Salsomaggiore Terme (PR)</span>
+          </button>
+        </li>
+        <li>
+          <button class="gal-item" role="tab" aria-selected="false" data-target="album-cis">
+            <span class="gal-item-name">C.I.S. — Promozione in A1</span>
+            <span class="gal-item-count"></span>
+            <span class="gal-item-meta">Roma · 2025</span>
+          </button>
+        </li>
+        <li>
+          <button class="gal-item" role="tab" aria-selected="false" data-target="album-interprovinciale">
+            <span class="gal-item-name">Campionato Interprovinciale</span>
+            <span class="gal-item-count"></span>
+            <span class="gal-item-meta">Cagliari · 2026</span>
+          </button>
+        </li>
+      </ul>
+    </aside>
+
+  </div>
+</section>
+
+<!-- TESSERATI -->
+<section class="members-section" id="tesserati">
+  <div class="section-header fade-up">
+    <div>
+      <p class="section-tag">La nostra squadra</p>
+      <h2 class="section-title">Tesserati Più Attivi</h2>
+      <div class="divider"></div>
     </div>
-    <div class="news-col">
-      <a class="news-card" href="#">
-        <span class="news-tag">Nazionale</span>
-        <h3>Ci avviciniamo ai Campionati italiani giovanili</h3>
-        <p>I nostri giovani sono pronti per partecipare al campionato nazionale.</p>
-        <div class="date">29/5 Agosto/Settembre 2026</div>
-      </a>
-      <a class="news-card" href="#">
-        <span class="news-tag">Evento</span>
-        <h3>Coppa città di Marrubiu — Work in progress...</h3>
-        <p>Modalità standard, aperto a tutti i livelli ELO.</p>
-        <div class="date">Ultima settimana di ottobre...</div>
-      </a>
+    <a href="tesserati.html" class="see-all">Tutti i tesserati →</a>
+  </div>
+  <div class="members-tabs fade-up">
+    <button class="tab-btn active" onclick="showTab(this,'adulti')">♙ Adulti</button>
+    <button class="tab-btn" onclick="showTab(this,'giovani')">♟ Giovani (U18)</button>
+  </div>
+  <div class="members-panel active" id="panel-adulti">
+    <div class="members-grid">
+      <div class="member-card fade-up">
+        <div class="member-header">
+          <div class="member-avatar">AA</div>
+          <div class="member-info"><h4>Alessandro Altea</h4><span class="rank-badge">Candidato Maestro</span></div>
+        </div>
+        <div class="member-stats">
+          <div class="mstat"><div class="val">2099</div><div class="key">ELO FIDE</div></div>
+          <div class="mstat"><div class="val">34</div><div class="key">Partite</div></div>
+          <div class="mstat"><div class="val">68%</div><div class="key">Vittorie</div></div>
+        </div>
+        <div class="member-titles"><span class="title-chip gold">3° Camp. Regionale 2025</span></div>
+        <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 9° classificato</span></div>
+      </div>
+      <div class="member-card fade-up">
+        <div class="member-header">
+          <div class="member-avatar">GM</div>
+          <div class="member-info"><h4>Gianluca Mameli</h4><span class="rank-badge">Candidato Maestro</span></div>
+        </div>
+        <div class="member-stats">
+          <div class="mstat"><div class="val">2015</div><div class="key">ELO FIDE</div></div>
+          <div class="mstat"><div class="val">28</div><div class="key">Partite</div></div>
+          <div class="mstat"><div class="val">61%</div><div class="key">Vittorie</div></div>
+        </div>
+        <div class="member-titles"><span class="title-chip gold">3° Coppa città di Tempio 2026</span></div>
+        <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 3° classificato</span></div>
+      </div>
+      <div class="member-card fade-up">
+        <div class="member-header">
+          <div class="member-avatar">LS</div>
+          <div class="member-info"><h4>Luca Sonis</h4><span class="rank-badge">Candidato Maestro</span></div>
+        </div>
+        <div class="member-stats">
+          <div class="mstat"><div class="val">2026</div><div class="key">ELO FIDE</div></div>
+          <div class="mstat"><div class="val">41</div><div class="key">Partite</div></div>
+          <div class="mstat"><div class="val">54%</div><div class="key">Vittorie</div></div>
+        </div>
+        <div class="member-titles"><span class="title-chip silver">3,5 pt su 4 all'ultimo C.I.S</span></div>
+        <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 6° classificato</span></div>
+      </div>
     </div>
   </div>
+  <div class="members-panel" id="panel-giovani">
+    <div class="members-grid">
+      <div class="member-card fade-up">
+        <div class="member-header">
+          <div class="member-avatar">LV</div>
+          <div class="member-info"><h4>Lorenzo Ventrice</h4><span class="rank-badge">U18 · Promessa · 1° Nazionale</span></div>
+        </div>
+        <div class="member-stats">
+          <div class="mstat"><div class="val">1950</div><div class="key">ELO FIDE</div></div>
+          <div class="mstat"><div class="val">22</div><div class="key">Partite</div></div>
+          <div class="mstat"><div class="val">72%</div><div class="key">Vittorie</div></div>
+        </div>
+        <div class="member-titles"><span class="title-chip gold">Vincitore CIG Regionale 6 volte di fila</span></div>
+        <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 16° classificato</span></div>
+      </div>
+      <div class="member-card fade-up">
+        <div class="member-header">
+          <div class="member-avatar">EC</div>
+          <div class="member-info"><h4>Emanuele Cancedda</h4><span class="rank-badge">U16 · Promessa · 1° Nazionale</span></div>
+        </div>
+        <div class="member-stats">
+          <div class="mstat"><div class="val">1893</div><div class="key">ELO FIDE</div></div>
+          <div class="mstat"><div class="val">18</div><div class="key">Partite</div></div>
+          <div class="mstat"><div class="val">65%</div><div class="key">Vittorie</div></div>
+        </div>
+        <div class="member-titles"><span class="title-chip gold">Più volte campione regionale U16</span></div>
+        <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 8° classificato</span></div>
+      </div>
+      <div class="member-card fade-up">
+        <div class="member-header">
+          <div class="member-avatar">VG</div>
+          <div class="member-info"><h4>Victoria Garau</h4><span class="rank-badge">U10 · Emergente</span></div>
+        </div>
+        <div class="member-stats">
+          <div class="mstat"><div class="val">1497</div><div class="key">ELO FIDE</div></div>
+          <div class="mstat"><div class="val">14</div><div class="key">Partite</div></div>
+          <div class="mstat"><div class="val">60%</div><div class="key">Vittorie</div></div>
+        </div>
+        <div class="member-titles"><span class="title-chip bronze">Campionessa Italiana U8 2024</span></div>
+        <div class="member-last-tournament">Ultimo torneo: <span>CRA Sardegna 2026 — 51ª classificata</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- TORNEI -->
+<section class="tornei-section" id="tornei">
+  <div class="section-header fade-up">
+    <div>
+      <p class="section-tag">Calendario competizioni</p>
+      <h2 class="section-title">Tornei & Risultati</h2>
+      <div class="divider"></div>
+    </div>
+    <a href="#" class="see-all">Archivio completo →</a>
+  </div>
+  <div class="cis-banner fade-up">
+    <div class="cis-banner-left">
+      <span class="cis-serie-badge cis-serie-a2">Serie A2</span>
+      <div>
+        <div class="cis-banner-title">Campionato Italiano a Squadre</div>
+        <div class="cis-banner-sub">Il Red Tal partecipa con 3 squadre nelle serie nazionali e regionali</div>
+      </div>
+    </div>
+    <div class="cis-banner-right">
+      <a href="cis.html" class="cis-banner-btn-int">Le nostre squadre →</a>
+      <a href="https://www.federscacchi.it/cis" target="_blank" rel="noopener" class="cis-banner-btn-ext">FSI C.I.S. ↗</a>
+    </div>
+  </div>
+  <div class="tornei-list fade-up">
+    <div class="torneo-row">
+      <div class="torneo-name"><h4>CIG 2025 — Campionato Regionale Sardegna U18</h4><p>Marrubiu · 13 Aprile 2025 · ELO Rapid FIDE</p></div>
+      <div class="torneo-meta"><div class="val">32</div><div class="key">Partecipanti</div></div>
+      <div class="torneo-meta"><div class="val">U18</div><div class="key">Categoria</div></div>
+      <div><span class="torneo-status status-upcoming">Prossimo</span></div>
+    </div>
+    <div class="torneo-row">
+      <div class="torneo-name"><h4>Trofeo Città di Marrubiu 2025</h4><p>Marrubiu · 30 Ottobre 2025 · ELO Standard FIDE</p></div>
+      <div class="torneo-meta"><div class="val">48</div><div class="key">Partecipanti</div></div>
+      <div class="torneo-meta"><div class="val">Open</div><div class="key">Categoria</div></div>
+      <div><span class="torneo-status status-done">Concluso</span></div>
+    </div>
+    <div class="torneo-row">
+      <div class="torneo-name"><h4>Torneo Blitz 2026</h4><p>Marrubiu · 20 Agosto 2026 · Blitz 3+2</p></div>
+      <div class="torneo-meta"><div class="val">20</div><div class="key">Partecipanti</div></div>
+      <div class="torneo-meta"><div class="val">Open</div><div class="key">Categoria</div></div>
+      <div><span class="torneo-status status-upcoming">Prossimamente</span></div>
+    </div>
+    <div class="torneo-row">
+      <div class="torneo-name"><h4>Campionato Regionale Assoluto Sardegna</h4><p>Oristano · Giugno 2026 · ELO Standard FIDE</p></div>
+      <div class="torneo-meta"><div class="val">~80</div><div class="key">Partecipanti</div></div>
+      <div class="torneo-meta"><div class="val">Open</div><div class="key">Categoria</div></div>
+      <div><span class="torneo-status status-done">Concluso</span></div>
+    </div>
+    <div class="torneo-row">
+      <div class="torneo-name"><h4>Trofeo Città di Marrubiu 2026</h4><p>Marrubiu · Ottobre 2026 · Open</p></div>
+      <div class="torneo-meta"><div class="val">—</div><div class="key">Partecipanti</div></div>
+      <div class="torneo-meta"><div class="val">Open</div><div class="key">Categoria</div></div>
+      <div><span class="torneo-status status-upcoming">Prossimamente</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PALMARÈS -->
+<section class="palmares-section" id="palmares">
+  <div class="section-header fade-up">
+    <div>
+      <p class="section-tag">Storia e risultati</p>
+      <h2 class="section-title">Palmarès</h2>
+      <div class="divider"></div>
+    </div>
+  </div>
+  <div class="palmares-timeline fade-up">
+
+    <div class="palmares-year-group">
+      <div class="palmares-year-label">2024</div>
+      <div class="palmares-items">
+        <div class="palmares-item gold">
+          <div class="palmares-medal">🥇</div>
+          <div class="palmares-body">
+            <span class="palmares-tag">Campionati Italiani Giovanili</span>
+            <h4>Victoria Garau — Campionessa Italiana U8 Femminile</h4>
+            <p>Salsomaggiore Terme. Victoria conquista il titolo di Campionessa Italiana nella categoria U8 Femminile, primo titolo nazionale in assoluto per il circolo.</p>
+          </div>
+        </div>
+        <div class="palmares-item silver">
+          <div class="palmares-medal">🥈</div>
+          <div class="palmares-body">
+            <span class="palmares-tag">Campionato Regionale Assoluto</span>
+            <h4>Alessandro Altea — 2° classificato, Sardegna</h4>
+            <p>Ottima prestazione di Altea nel campionato regionale, a un passo dal titolo con una stagione di grande continuità.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="palmares-year-group">
+      <div class="palmares-year-label">2025</div>
+      <div class="palmares-items">
+        <div class="palmares-item bronze">
+          <div class="palmares-medal">🥉</div>
+          <div class="palmares-body">
+            <span class="palmares-tag">Campionato Regionale Assoluto</span>
+            <h4>Alessandro Altea — 3° classificato, Sardegna</h4>
+            <p>Conferma sul podio regionale per Altea, che consolida il suo ruolo di riferimento tra i giocatori sardi di vertice.</p>
+          </div>
+        </div>
+        <div class="palmares-item gold">
+          <div class="palmares-medal">🏆</div>
+          <div class="palmares-body">
+            <span class="palmares-tag">C.I.S. — Campionato Italiano a Squadre</span>
+            <h4>Promozione in Serie A1</h4>
+            <p>Roma. Il Red Tal conquista la promozione nella massima serie del Campionato Italiano a Squadre, traguardo storico per un circolo della Sardegna.</p>
+            <div class="palmares-links">
+              <a href="cis.html" class="palmares-link-int">Le nostre squadre →</a>
+              <a href="https://www.federscacchi.it/cis" target="_blank" rel="noopener" class="palmares-link-ext">C.I.S. su FSI ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="palmares-year-group">
+      <div class="palmares-year-label">2026</div>
+      <div class="palmares-items">
+        <div class="palmares-item bronze">
+          <div class="palmares-medal">🥉</div>
+          <div class="palmares-body">
+            <span class="palmares-tag">Coppa Città di Tempio 2026</span>
+            <h4>Gianluca Mameli — 3° classificato</h4>
+            <p>Terzo posto per Mameli in un torneo di alto livello tecnico, con una prestazione convincente nelle ultime tre partite decisive.</p>
+          </div>
+        </div>
+        <div class="palmares-item gold">
+          <div class="palmares-medal">🥇</div>
+          <div class="palmares-body">
+            <span class="palmares-tag">Campionato Interprovinciale</span>
+            <h4>Victoria Garau — 1ª classificata</h4>
+            <p>Cagliari. Victoria vince il campionato interprovinciale con un punteggio pieno, confermandosi la più forte della sua fascia d'età in Sardegna.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- TESSERATI -->
@@ -667,7 +1123,7 @@
 
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
-            <img src="img/dani.JPG" alt="Daniele Spiga"> 
+            <img src="dani.JPG" alt="Daniele Spiga"> 
           </div>
         <div class="direttivo-info">
           <h4>Daniele Spiga</h4>
@@ -677,7 +1133,7 @@
 
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
-          <img src="img/antonello.JPG" alt="Antonello Pannella"> 
+          <img src="antonello.JPG" alt="Antonello Pannella"> 
         </div>
         <div class="direttivo-info">
           <h4>Antonello Pannella</h4>
@@ -687,7 +1143,7 @@
 
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
-          <img src="img/matti.PNG" alt="Mattia Corrias">
+          <img src="matti.PNG" alt="Mattia Corrias">
         </div>
         <div class="direttivo-info">
           <h4>Mattia Corrias</h4>
@@ -697,7 +1153,7 @@
 
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
-          <img src="img/mame.jpg" alt="Gianluca Mameli">
+          <img src="mame.jpg" alt="Gianluca Mameli">
         </div>
         <div class="direttivo-info">
           <h4>Gianluca Mameli</h4>
@@ -715,7 +1171,7 @@
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
           <div class="direttivo-photo-placeholder"></div>
-            <img src="img/dani.JPG" alt="Daniele Spiga"> 
+            <img src="dani.JPG" alt="Daniele Spiga"> 
           </div>
         <div class="direttivo-info">
           <h4>Daniele Spiga</h4>
@@ -725,7 +1181,7 @@
 
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
-          <img src="img/ale.jpg" alt="Alessandro Altea">
+          <img src="ale.jpg" alt="Alessandro Altea">
         </div>
         <div class="direttivo-info">
           <h4>Alessandro Altea</h4>
@@ -743,7 +1199,7 @@
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
           <div class="direttivo-photo-placeholder"></div>
-            <img src="img/rocchi.jpg" alt="Francesco Rocchiccioli">
+            <img src="rocchi.jpg" alt="Francesco Rocchiccioli">
         </div>
         <div class="direttivo-info">
           <h4>Francesco Rocchiccioli</h4>
@@ -754,7 +1210,7 @@
       <div class="direttivo-card">
         <div class="direttivo-photo-wrap">
           <div class="direttivo-photo-placeholder"></div>
-            <img src="img/ventri2.jpg" alt="Lorenzo Ventrice"> 
+            <img src="ventri2.jpg" alt="Lorenzo Ventrice"> 
         </div>
         <div class="direttivo-info">
           <h4>Lorenzo Ventrice</h4>
@@ -782,7 +1238,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a class="nav-logo" href="#" style="display:inline-flex;margin-bottom:1rem;">
-        <div class="logo-emblem"><img src="img/redtalogo.svg" height="45" alt="Logo" class="logo-sito"></div>
+        <div class="logo-emblem"><img src="redtalogo.svg" height="45" alt="Logo" class="logo-sito"></div>
         <div class="logo-text"><strong>RED TAL</strong><span>Marrubiu · dal 2009</span></div>
       </a>
       <p>ASD Circolo Scacchistico Red Tal — promuovere gli scacchi in Sardegna, crescere campioni e costruire comunità.</p>
@@ -834,10 +1290,10 @@
 <script>
   /* THEME */
   const html = document.documentElement;
-  const saved = localStorage.getItem('redtal-theme') || 'light';
+  const saved = localStorage.getItem('redtal-theme') || 'dark';
   html.setAttribute('data-theme', saved);
   function toggleTheme() {
-    const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
     localStorage.setItem('redtal-theme', next);
   }
@@ -1035,6 +1491,102 @@
     btn.classList.add('active');
     document.getElementById('eloPanel-' + name).classList.add('active');
   }
+/* GALLERIA TORNEI */
+  (function() {
+    const items = document.querySelectorAll('.gal-item');
+    const albums = document.querySelectorAll('.gal-album');
+    if (!items.length || !albums.length) return;
+
+    albums.forEach(album => {
+      const track = album.querySelector('.gal-track');
+      const slides = album.querySelectorAll('.gal-slide');
+      const prevBtn = album.querySelector('.gal-prev');
+      const nextBtn = album.querySelector('.gal-next');
+      const counter = album.querySelector('.gal-counter');
+      const dotsWrap = album.querySelector('.gal-dots');
+      const viewer = album.querySelector('.gal-viewer');
+      const total = slides.length;
+      let idx = 0;
+
+      // Aggiorna contatore nella sidebar
+      const tabBtn = document.querySelector(`.gal-item[data-target="${album.id}"] .gal-item-count`);
+      if (tabBtn) {
+        const hasRealPhoto = album.querySelector('img') !== null;
+        tabBtn.textContent = hasRealPhoto ? `${total} foto` : 'In arrivo';
+      }
+
+      // Imposta sfondo blur automatico per ogni foto
+      slides.forEach(slide => {
+        const img = slide.querySelector('img');
+        const blur = slide.querySelector('.gal-blur');
+        if (img && blur) {
+          blur.style.backgroundImage = `url('${img.getAttribute('src')}')`;
+        }
+      });
+
+      // Crea pallini se c'è più di 1 foto
+      if (total > 1 && dotsWrap) {
+        slides.forEach((_, i) => {
+          const dot = document.createElement('button');
+          dot.className = 'gal-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', `Vai alla foto ${i + 1}`);
+          dot.addEventListener('click', () => goTo(i));
+          dotsWrap.appendChild(dot);
+        });
+      }
+
+      function goTo(n) {
+        idx = Math.max(0, Math.min(total - 1, n));
+        track.style.transform = `translateX(-${idx * 100}%)`;
+        if (counter) counter.textContent = `${idx + 1} / ${total}`;
+        if (prevBtn) prevBtn.disabled = idx === 0;
+        if (nextBtn) nextBtn.disabled = idx === total - 1;
+        if (dotsWrap) {
+          dotsWrap.querySelectorAll('.gal-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === idx);
+          });
+        }
+      }
+
+      if (prevBtn) prevBtn.addEventListener('click', () => goTo(idx - 1));
+      if (nextBtn) nextBtn.addEventListener('click', () => goTo(idx + 1));
+
+      // Navigazione da tastiera
+      if (viewer) {
+        viewer.addEventListener('keydown', e => {
+          if (e.key === 'ArrowLeft') goTo(idx - 1);
+          if (e.key === 'ArrowRight') goTo(idx + 1);
+        });
+      }
+
+      // Swipe touch su mobile
+      let tx = 0;
+      track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - tx;
+        if (Math.abs(dx) > 40) goTo(dx < 0 ? idx + 1 : idx - 1);
+      }, { passive: true });
+
+      goTo(0);
+    });
+
+    // Cambio torneo dalla lista
+    items.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        items.forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        albums.forEach(a => a.classList.remove('is-active'));
+
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+        const targetAlbum = document.getElementById(targetId);
+        if (targetAlbum) targetAlbum.classList.add('is-active');
+      });
+    });
+  })();
 </script>
 </body>
 </html>
