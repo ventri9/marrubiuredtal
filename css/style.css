@@ -4454,17 +4454,41 @@ footer {
     font-size: 1rem;
   }
 }
-/* Fix formato intero immagini galleria su mobile e desktop */
-.gal-slide img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain !important;
-  object-position: center !important;
-}
-
 @media (max-width: 768px) {
+  .galleria-stage {
+    padding: 1rem;
+  }
+
+  .gal-album-head h3 {
+    font-size: 1.25rem;
+  }
+
   .gal-slide {
-    aspect-ratio: 4 / 3;
-    max-height: 70vh;
+    aspect-ratio: 4 / 5;
+    max-height: 65vh;
+  }
+
+  .gal-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  .gal-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .gal-prev { left: 0.6rem; }
+  .gal-next { right: 0.6rem; }
+
+  .gal-caption {
+    padding: 2rem 1rem 0.9rem;
+  }
+
+  .gal-caption-title {
+    font-size: 1rem;
   }
 }
