@@ -4417,26 +4417,16 @@ footer {
 /* ── RESPONSIVE GALLERIA ── */
 @media (max-width: 960px) {
   .galleria {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-
-  .galleria-stage,
-  .galleria-side {
-    min-width: 0;
-  }
-
   .galleria-stage { order: 1; }
   .galleria-side  { order: 2; margin-top: 0.5rem; }
-
-  .gal-dots {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
 }
+
 @media (max-width: 768px) {
   .galleria-stage {
-    padding: 1rem;
+    padding: 1.1rem;
   }
 
   .gal-album-head h3 {
@@ -4444,14 +4434,7 @@ footer {
   }
 
   .gal-slide {
-    aspect-ratio: 4 / 5;
-  }
-
-  .gal-slide img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    object-position: center !important;
+    aspect-ratio: 4 / 3;
   }
 
   .gal-btn {
@@ -4469,5 +4452,291 @@ footer {
 
   .gal-caption-title {
     font-size: 1rem;
+  }
+}
+
+/* ══════════════════════════════════════════
+   COPPA CITTÀ DI MARRUBIU
+══════════════════════════════════════════ */
+.coppa-section {
+  background: var(--bg);
+}
+
+.coppa-intro {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 4.5rem;
+}
+
+.coppa-text p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
+}
+
+.coppa-stats {
+  display: flex;
+  margin: 2rem 0 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.coppa-stat {
+  flex: 1;
+  padding: 0 1.5rem;
+  border-right: 1px solid var(--border);
+}
+
+.coppa-stat:first-child { padding-left: 0; }
+.coppa-stat:last-child  { border-right: none; }
+
+.coppa-stat .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--red);
+  line-height: 1;
+}
+
+.coppa-stat .lbl {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* Card edizione */
+.coppa-edition {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--red);
+  border-radius: 10px;
+  padding: 1.75rem 2rem;
+}
+
+.coppa-edition-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.coppa-edition-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--red);
+  background: var(--red-dim);
+  border: 1px solid rgba(192, 57, 43, 0.3);
+  padding: 4px 12px;
+  border-radius: 2px;
+}
+
+.coppa-edition h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.coppa-facts {
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.coppa-facts li {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.coppa-facts li span {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 2px;
+}
+
+.coppa-edition-winner {
+  margin-top: 1.25rem;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.coppa-edition-winner strong {
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* Albo d'oro */
+.albo-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.albo-head h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.albo-multi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.albo-multi span {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.albo-multi strong {
+  color: var(--red);
+  margin-right: 4px;
+}
+
+.albo-list {
+  list-style: none;
+  column-count: 2;
+  column-gap: 1.5rem;
+}
+
+.albo-row {
+  break-inside: avoid;
+  display: grid;
+  grid-template-columns: 64px 44px 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 0.75rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.albo-row:hover {
+  border-color: rgba(192, 57, 43, 0.35);
+  transform: translateX(4px);
+}
+
+.albo-year {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+}
+
+.albo-ed {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--muted2);
+}
+
+.albo-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.albo-name em {
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #d4a843;
+  background: rgba(212, 168, 67, 0.14);
+  border: 1px solid rgba(212, 168, 67, 0.4);
+  padding: 1px 7px;
+  border-radius: 2px;
+  margin-left: 8px;
+  vertical-align: 1px;
+}
+
+.albo-name small {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.albo-row--pending {
+  border-style: dashed;
+}
+
+.albo-row--pending .albo-name {
+  color: var(--muted);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.albo-note {
+  margin-top: 0.75rem;
+  font-size: 12px;
+  color: var(--muted2);
+}
+
+@media (max-width: 960px) {
+  .coppa-intro {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .coppa-stat { padding: 0 0.75rem; }
+  .coppa-stat .num { font-size: 1.5rem; }
+  .coppa-stat .lbl { font-size: 9px; letter-spacing: 1px; }
+
+  .coppa-edition { padding: 1.25rem; }
+  .coppa-edition h3 { font-size: 1.2rem; }
+
+  .coppa-facts li {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .albo-head { justify-content: center; text-align: center; }
+  .albo-multi { justify-content: center; }
+  .albo-list { column-count: 1; }
+
+  .albo-row {
+    grid-template-columns: 54px 36px 1fr;
+    padding: 0.75rem 0.9rem;
+  }
+
+  .coppa-actions .btn-outline {
+    display: block;
+    text-align: center;
   }
 }
