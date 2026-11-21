@@ -4417,11 +4417,22 @@ footer {
 /* ── RESPONSIVE GALLERIA ── */
 @media (max-width: 960px) {
   .galleria {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
   }
+
+  .galleria-stage,
+  .galleria-side {
+    min-width: 0;
+  }
+
   .galleria-stage { order: 1; }
   .galleria-side  { order: 2; margin-top: 0.5rem; }
+
+  .gal-dots {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
 }
 
 @media (max-width: 768px) {
