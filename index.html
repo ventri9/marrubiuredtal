@@ -894,7 +894,7 @@
       <h2 class="section-title">Coppa Città di Marrubiu</h2>
       <div class="divider"></div>
     </div>
-    <a href="#galleria" class="see-all">Foto del torneo →</a>
+    <a href="#galleria" class="see-all" data-open-album="album-coppa">Foto del torneo →</a>
   </div>
 
   <!-- INTRO + EDIZIONE 2026 -->
@@ -1821,6 +1821,13 @@
       });
     });
   })();
+      /* LINK CHE APRONO UN ALBUM SPECIFICO DELLA GALLERIA */
+    document.querySelectorAll('[data-open-album]').forEach(link => {
+      link.addEventListener('click', () => {
+        const btn = document.querySelector('.gal-item[data-target="' + link.dataset.openAlbum + '"]');
+        if (btn) btn.click();
+      });
+    });
 
 </script>
 </body>
